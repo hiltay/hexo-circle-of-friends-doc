@@ -14,30 +14,30 @@
 2. 数据由爬虫推送至数据库保存（默认为leancloud，可以自行更改）
 3. vercel部署的api从数据库获取数据交付给前端
 
-### leancloud数据库搭建
-
-前往[leancloud国际版官网](https://leancloud.app/)注册账号并登录。
-
-前往[控制台](https://console.leancloud.app/apps)新建应用，应用名称无限制
-
-![QQ截图20220205075127](QQ截图20220205075127.png)
-
-进入应用中，点击`设置-->应用凭证`，记录`AppID`和`AppKey`，后面会用到。
-
-![QQ截图20220205075547](QQ截图20220205075547.png)
-
-### github爬虫仓库部署及配置
+部署方法：
 
 fork友链朋友圈的项目仓库，地址：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends
 
-点击`fork`后仓库的`Settings-->Secrets-->New repository secret`
+在`fork`后仓库中，编辑仓库中的`/hexo_circle_of_friends/setting.py`文件，必须修改的配置如下：
+
+```python
+FRIENDPAGE_STRATEGY={
+    "strategy": "default",
+    "theme": "butterfly"  # 请修改为您的主题
+}
+```
+
+然后点击仓库的`Settings-->Secrets-->New repository secret`
 
 ![QQ图片20220205080305](QQ图片20220205080305.png)
 
-添加三个环境变量，其中：
+添加环境变量，必须添加你的友链链接地址`LINK`，以及：
 
-- Name：分别为`APPID`、`APPKEY`、`LINK`
-- Value：分别对应填入刚刚保存leancloud的`AppID`和`AppKey`，以及你的友链链接地址（例如 https://noionion.top/link/）
+- 如果数据库使用leancloud，请添加`APPID`和`APPKEY`
+- 如果数据库使用mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
+- 如果数据库使用sqlite，请添加`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`，详见配置项说明
+
+下面演示使用leancloud的存储方式，如下图所示，分别添加`APPID`和`APPKEY`，获取方式见。。。
 
 ![QQ图片20220205080840](QQ图片20220205080840.png)
 
@@ -49,27 +49,6 @@ fork友链朋友圈的项目仓库，地址：https://github.com/Rock-Candy-Tea/
 
 ![QQ截图20220205081424](QQ截图20220205081424.png)
 
-之后点击仓库`star`来完成第一次程序运行，不出意外的话结果如下图：
-
-![QQ截图20220205081513](QQ截图20220205081513.png)
-
-这时刚刚的leancloud上也能看到上传的数据。
-
-此后在每天的0,6,12,18,21点整，都会自动启动爬虫进行爬取。
-
-编辑仓库中的`/hexo_circle_of_friends/setting.py`文件，修改友链页的获取策略：
-
-```python
-FRIENDPAGE_STRATEGY={
-    "strategy": "default",
-    "theme": "butterfly"  # 请修改为您的主题
-}
-```
-
-如需更换数据库，以及其它更多配置，详见配置项说明。
-
-### vercel部署
-
 前往[vercel官网](https://vercel.com/)，直接用github创建账号并用手机号绑定。
 
 点击`New Project`新建项目
@@ -78,16 +57,25 @@ FRIENDPAGE_STRATEGY={
 
 ![QQ截图20220205082743](QQ截图20220205082743.png)
 
-添加两个环境变量，其中：
+添加环境变量，其中：
 
-- Name：分别为`APPID`、`APPKEY`
-- Value：分别对应填入刚刚保存leancloud的`AppID`和`AppKey`
+- 如果数据库使用leancloud，请添加`APPID`和`APPKEY`
+- 如果数据库使用mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
+- 如果数据库使用sqlite，不需要配置
 
 添加完成后，点击`Deploy`。
 
 ![QQ截图20220205083346](QQ截图20220205083346.png)
 
-回到首页，等待一会，应该会部署完成，找到`DOMAINS`下面的地址，如：https://hexo-friendcircle4-api.vercel.app
+回到首页，等待一会，应该会部署完成。
+
+之后回到点击仓库`star`来完成第一次程序运行，不出意外的话结果如下图：
+
+![QQ截图20220205081513](QQ截图20220205081513.png)
+
+（这时刚刚的leancloud上也能看到上传的数据。）此后在每天的0,6,12,18,21点整，都会自动启动爬虫进行爬取。
+
+在vercel找到`DOMAINS`下面的地址，如：https://hexo-friendcircle4-api.vercel.app，前端需要的就是这个地址。
 
 ![QQ截图20220205083633](QQ截图20220205083633.png)
 
@@ -95,37 +83,7 @@ FRIENDPAGE_STRATEGY={
 
 ## server部署
 
-首先请确保你的服务器安装好python3.8环境和git，搭建过程：
-
-安装依赖：
-
-```bash
-yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel yum vim gcc git
-```
-
-安装python
-
-```bash
-wget https://www.python.org/ftp/python/3.8.8/Python-3.8.8.tgz
-tar -zxf Python-3.8.8.tgz && cd Python-3.8.8
-./configure --prefix=/usr/local/python3
-make && make install
-```
-
-建立软连接
-
-```bash
-ln -s /usr/local/python3/bin/python3.8 /usr/bin/python3
-ln -s /usr/local/python3/bin/pip3.8 /usr/bin/pip3
-```
-
-验证：
-
-```bash
-python3 --version
-```
-
-出现版本号即安装成功。
+首先请确保你的服务器安装好python3.8环境和git。
 
 运行原理：
 
@@ -177,22 +135,9 @@ curl 127.0.0.1:8000/all
 
 出现数据即为部署成功。
 
-接下来，开放服务器的对应端口（我这里是8000），就可以通过`IP:端口`或者`域名:端口`访问到API，也可以通过配置反向代理，转发到网站的80端口下。
+接下来，开放服务器的对应端口（我这里是8000），就可以通过`IP:端口`或者`域名:端口`访问到API，前端需要的就是这个地址。
 
-如果需要关闭爬虫和api，需要找到其进程号
-
-```bash
-ps aux
-```
-
-![QQ截图20220205222725](QQ截图20220205222725.png)
-
-杀掉对应的进程即可
-
-```bash
-kill -9 7584
-kill -9 7585
-```
+也可以通过配置反向代理，转发到网站的80端口下。
 
 ## docker部署
 
@@ -260,9 +205,9 @@ docker build -t fcircle .
 等待构建完成后，创建容器：
 
 ```bash
-docker run -di -p [port]:8000 fcircle
+docker run -di -p [port]:8000 -v /tmp/:/tmp/ fcircle
 # 其中 [port] 替换为你需要开放的端口，比如：
-docker run -di -p 8000:8000 fcircle
+docker run -di -p 8000:8000 -v /tmp/:/tmp/ fcircle
 ```
 
 输入`docker ps`查看创建情况：
@@ -277,5 +222,7 @@ curl 127.0.0.1:8000/all
 
 出现数据即为部署成功。
 
-接下来，开放服务器的对应端口（我这里是8000），就可以通过`IP:端口`或者`域名:端口`访问到API，也可以通过配置反向代理，转发到网站的80端口下。
+接下来，开放服务器的对应端口（我这里是8000），就可以通过`IP:端口`或者`域名:端口`访问到API，前端需要的就是这个地址。
+
+也可以通过配置反向代理，转发到网站的80端口下。
 

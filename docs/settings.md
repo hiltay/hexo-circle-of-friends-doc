@@ -33,26 +33,28 @@ env:
   MYSQL_IP: ${{ secrets.MYSQL_IP }} # 数据库IP地址
   MYSQL_DB: ${{ secrets.MYSQL_DB }} # 要连接到的库的名称
   # sqlite配置，用于将db文件上传到github仓库
-  GITHUB_NAME: ${{ secrets.GITHUB_NAME }} # 你的github昵称
-  GITHUB_EMAIL: ${{ secrets.GITHUB_EMAIL }} # 你的github邮箱
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # github token
+  GITHUB_NAME: ${{ secrets.GH_NAME }} # 你的github昵称
+  GITHUB_EMAIL: ${{ secrets.GH_EMAIL }} # 你的github邮箱
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # github token
 ```
 
 比如，如果使用sqlite，仓库需要添加的secert为：`LINK`，`GITHUB_NAME`，`GITHUB_EMAIL`，`GITHUB_TOKEN`。
 
 ### server部署
 
-如果采用github部署方式，环境变量配置需要修改在`server.sh`文件。
+如果采用server部署方式，环境变量配置需要修改在`server.sh`文件。
 
 ### docker部署
 
-如果采用github部署方式，环境变量配置需要修改`Dockerfile`文件。
+如果采用server部署方式，环境变量配置需要修改`Dockerfile`文件。
 
 ## 配置示例
 
+给出两个示例，其它的配置组合大同小异，请自行尝试。
+
 ### github+sqlite
 
-如果想使用github+sqlite数据库，修改`settings.py`文件：
+如果想使用github+sqlite，修改`settings.py`文件：
 
 ```python
 # 存储方式，可选项：leancloud，mysql, sqlite；默认为leancloud
@@ -70,7 +72,38 @@ env:
   STORAGE_TYPE: sqlite # 如果不配置，默认为leancloud
 ```
 
-添加secert：`LINK`，`GITHUB_NAME`，`GITHUB_EMAIL`，`GITHUB_TOKEN`
+添加secert：`LINK`，`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`
+
+github token获取方式，请参考[官方文档](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)，其中，`Select scopes`选择`repo`。
+
+![QQ截图20220206015522](QQ截图20220206015522.png)
 
 ### docker+mysql
+
+如果想使用docker+mysql，修改`settings.py`文件：
+
+```python
+# 存储方式，可选项：leancloud，mysql, sqlite；默认为leancloud
+DATABASE = "mysql"
+
+# 部署方式，可选项：github，server，docker；默认为github
+DEPLOY_TYPE = "docker"
+```
+
+修改`Dockerfile`文件的`LINK`，以及mysql部分的配置：
+
+```dockerfile
+### 在这里配置环境变量
+### 通用配置
+ENV LINK="https://www.yyyzyyyz.cn/link/"
+#ENV PROXY=""
+### leancloud配置
+#ENV APPID=""
+#ENV APPKEY=""
+### mysql配置
+ENV MYSQL_USERNAME="root"
+ENV MYSQL_PASSWORD="xxxx"
+ENV MYSQL_IP="xx.xx.xx.xx"
+ENV MYSQL_DB="test"
+```
 

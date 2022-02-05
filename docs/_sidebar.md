@@ -12,6 +12,8 @@
 
 * [配置项说明](settings.md)
 
+* [常见问题](problems)
+
 * [版本更新](update)
 
 * [api接口说明](apidoc)
