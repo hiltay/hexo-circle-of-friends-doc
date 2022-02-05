@@ -1,10 +1,8 @@
 # 常见问题
 
-按照部署方式的不同，逐一进行解答。
+## github部署的相关问题
 
-## github部署
-
-### 如何搭建leancloud数据库？
+### 如何创建leancloud数据库？
 
 前往[leancloud国际版官网](https://leancloud.app/)注册账号并登录。
 
@@ -18,7 +16,7 @@
 
 ![QQ截图20220205075547](QQ截图20220205075547.png)
 
-## server部署
+## server部署的相关问题
 
 ### 如何安装python环境？
 
@@ -84,7 +82,7 @@ cat /tmp/api.log
 cat /tmp/crawler.log
 ```
 
-## docker部署
+## docker部署的相关问题
 
 ### 如何安装git？
 
@@ -138,4 +136,6 @@ systemctl enable docker
 cat /tmp/api.log
 cat /tmp/crawler.log
 ```
+
+## 其他问题
 

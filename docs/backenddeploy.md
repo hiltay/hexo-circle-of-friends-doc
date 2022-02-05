@@ -1,7 +1,5 @@
 # 后端部署
 
-后端部署目前提供github，server，docker三种方式。
-
 其中github为云端部署，server和docker需要您自备服务器。
 
 ## github部署
@@ -31,13 +29,15 @@ FRIENDPAGE_STRATEGY={
 
 ![QQ图片20220205080305](QQ图片20220205080305.png)
 
-添加环境变量，必须添加你的友链链接地址`LINK`，以及：
+添加环境变量，secert中必须添加你的友链链接地址`LINK`，以及：
 
-- 如果数据库使用leancloud，请添加`APPID`和`APPKEY`
-- 如果数据库使用mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
-- 如果数据库使用sqlite，请添加`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`，详见配置项说明
+- 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
+- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
+- 如果数据库选择的是sqlite，请添加`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`，可以参考[配置示例](settings.md?id=githubsqlite)。
 
-下面演示使用leancloud的存储方式，如下图所示，分别添加`APPID`和`APPKEY`，获取方式见[这里](problems.md?id=如何获取appid和appkey？)。
+下面演示使用leancloud的存储方式，首先需要创建leancloud数据库，创建方式见[这里](problems.md?id=如何创建leancloud数据库？)。
+
+如下图所示，在仓库分别添加`APPID`和`APPKEY`，获取方式见[这里](problems.md?id=如何获取appid和appkey？)。
 
 ![QQ图片20220205080840](QQ图片20220205080840.png)
 
@@ -83,7 +83,7 @@ FRIENDPAGE_STRATEGY={
 
 ## server部署
 
-首先请确保你的服务器安装好python3.8环境和git。
+首先请确保你的服务器安装好python3.8环境和git，如果未安装可参考[如何安装python环境](problems.md?id=如何安装python环境？)和[如何安装git](problems.md?id=如何安装git？)
 
 运行原理：
 
@@ -110,9 +110,24 @@ DEPLOY_TYPE = "server"
 
 然后编辑仓库中的`server.sh`文件，将`LINK`修改为你的友链链接地址，将`EXPOSE_PORT`修改为你想要对外暴露的端口号，以及：
 
-- 如果数据库使用leancloud，请添加`APPID`和`APPKEY`
-- 如果数据库使用mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
-- 如果数据库使用sqlite，不需要配置
+- 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
+- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
+- 如果数据库选择的是sqlite，不需要配置
+
+```shell
+### 通用配置
+export LINK="https://www.yyyzyyyz.cn/link/"
+export EXPOSE_PORT=8000
+#export PROXY=""
+### leancloud配置
+export APPID=""
+export APPKEY=""
+### mysql配置
+#export MYSQL_USERNAME=""
+#export MYSQL_PASSWORD=""
+#export MYSQL_IP=""
+#export MYSQL_DB=""
+```
 
 修改完成后，登录进入你的服务器，依次执行：
 
@@ -141,6 +156,8 @@ curl 127.0.0.1:8000/all
 
 ## docker部署
 
+首先请确保你的服务器安装好docker和git，如果未安装可参考[如何安装python环境](problems.md?id=如何安装docker？)和[如何安装git](problems.md?id=如何安装git？)
+
 运行原理：
 
 1. 通过Dockerfile构建自定义镜像
@@ -167,9 +184,9 @@ DEPLOY_TYPE = "docker"
 
 然后编辑仓库中的`/Dockerfile`文件，将`LINK`修改为你的友链链接地址，以及：
 
-- 如果数据库使用leancloud，请添加`APPID`和`APPKEY`
-- 如果数据库使用mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
-- 如果数据库使用sqlite，不需要配置
+- 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
+- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
+- 如果数据库选择的是sqlite，不需要配置
 
 ```dockerfile
 FROM python:3.8
@@ -192,7 +209,7 @@ RUN cd ./hexo_circle_of_friends && pip3 install -r requirements.txt
 CMD bash ./start.sh
 ```
 
-修改完成后，登录进入你的服务器（前提是已经安装好docker和git），依次执行：
+修改完成后，登录进入你的服务器，依次执行：
 
 `clone`你的仓库，进入仓库构建镜像
 

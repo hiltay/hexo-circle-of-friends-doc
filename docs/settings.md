@@ -42,7 +42,7 @@ env:
 
 ### server部署
 
-如果采用server部署方式，环境变量配置需要修改在`server.sh`文件。
+如果采用server部署方式，环境变量配置需要修改`server.sh`文件。
 
 ### docker部署
 
