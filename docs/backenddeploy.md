@@ -37,7 +37,7 @@ FRIENDPAGE_STRATEGY={
 - 如果数据库使用mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库使用sqlite，请添加`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`，详见配置项说明
 
-下面演示使用leancloud的存储方式，如下图所示，分别添加`APPID`和`APPKEY`，获取方式见。。。
+下面演示使用leancloud的存储方式，如下图所示，分别添加`APPID`和`APPKEY`，获取方式见[这里](./problems.md?id=如何获取appid和appkey？)。
 
 ![QQ图片20220205080840](QQ图片20220205080840.png)
 
