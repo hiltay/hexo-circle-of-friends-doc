@@ -156,7 +156,7 @@ curl 127.0.0.1:8000/all
 
 ## docker部署
 
-首先请确保你的服务器安装好docker和git，如果未安装可参考[如何安装python环境](problems.md?id=如何安装docker？)和[如何安装git](problems.md?id=如何安装git？)
+首先请确保你的服务器安装好docker和git，如果未安装可参考[如何安装docker](problems.md?id=如何安装docker？)和[如何安装git](problems.md?id=如何安装git？)
 
 运行原理：
 
