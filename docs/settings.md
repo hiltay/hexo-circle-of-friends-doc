@@ -6,7 +6,18 @@
 
 项目配置在仓库中的`/hexo_circle_of_friends/setting.py`文件：
 
-请根据需要，修改其中的内容。
+请根据文件中的注释，结合本节说明，修改其中的内容。
+
+- **OUTDATE_CLEAN**：默认为60。超过这个值（距今超过60天）的文章，会在数据库中被删除。
+- **FRIENDPAGE_STRATEGY**：友链页的获取策略，配置方法在注释中有详细的说明。
+- **SETTINGS_FRIENDS_LINKS**：配置项友链。这是一种通用的方法，如果程序不支持爬取你的友链页，请打开此项。
+- **GITEE_FRIENDS_LINKS**：从gitee issues中获取友链信息。
+- **GITHUB_FRIENDS_LINKS **：从github issues中获取友链信息。
+- **BLOCK_SITE**：屏蔽站点，配置在这里的网址不会被爬取。比如，你的友链页添加了自己，并且不想被爬虫获取，就可以把自己的主页地址屏蔽掉。
+- **HTTP_PROXY**：如果想为爬虫设置HTTP代理，将此项设为True，然后根据你选择的数据库不同，添加环境变量。名称为`PROXY`，值为`[IP]:[端口]`，比如：192.168.1.106:8080。**注意，目前只支持添加一个HTTP代理。**
+- **EXTRA_FRIENPAGE_LINK**：额外的友链页获取。比如你的友链页为https://www.yyyzyyyz.cn/link/ ，配置在环境变量`LINK`中，你还想同时获取另外一个友链页https://noionion.top/friendcircle/ ，就可以把后者添加在这个列表中，支持添加多个。
+- **DATABASE**：数据的存储方式，目前支持将数据保存在`leancloud`、`mysql`、`sqlite`，默认为`leancloud`。
+- **DEPLOY_TYPE**：整个项目的部署方式，目前支持将项目部署在`github`、`server`、`docker`，默认为`github`。
 
 ## 环境变量配置
 
@@ -74,7 +85,7 @@ env:
 
 添加secert：`LINK`，`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`
 
-github token获取方式，请参考[官方文档](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)，其中，`Select scopes`选择`repo`。
+`GH_TOKEN`获取方式，请参考[官方文档](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)，其中，`Select scopes`选择`repo`。
 
 ![QQ截图20220206015522](QQ截图20220206015522.png)
 

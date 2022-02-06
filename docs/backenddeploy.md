@@ -75,11 +75,13 @@ FRIENDPAGE_STRATEGY={
 
 （这时刚刚的leancloud上也能看到上传的数据。）此后在每天的0,6,12,18,21点整，都会自动启动爬虫进行爬取。
 
-在vercel找到`DOMAINS`下面的地址，如：https://hexo-friendcircle4-api.vercel.app，前端需要的就是这个地址。
+在vercel找到`DOMAINS`下面的地址，如：https://hexo-friendcircle4-api.vercel.app ，前端需要的就是这个地址。
 
 ![QQ截图20220205083633](QQ截图20220205083633.png)
 
 在这个地址后面拼接`/all`尝试访问，出现数据就说明配置成功。
+
+如果想使用其他数据库，请参考[配置项说明](settings.md)。
 
 ## server部署
 
@@ -106,7 +108,7 @@ FRIENDPAGE_STRATEGY={
 DEPLOY_TYPE = "server"
 ```
 
-如需更换数据库，以及其它更多配置，详见配置项说明。
+如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
 
 然后编辑仓库中的`server.sh`文件，将`LINK`修改为你的友链链接地址，将`EXPOSE_PORT`修改为你想要对外暴露的端口号，以及：
 
@@ -180,7 +182,7 @@ FRIENDPAGE_STRATEGY={
 DEPLOY_TYPE = "docker"
 ```
 
-如需更换数据库，以及其它更多配置，详见配置项说明。
+如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
 
 然后编辑仓库中的`/Dockerfile`文件，将`LINK`修改为你的友链链接地址，以及：
 
