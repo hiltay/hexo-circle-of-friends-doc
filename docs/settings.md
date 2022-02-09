@@ -55,9 +55,83 @@ env:
 
 如果采用server部署方式，环境变量配置需要修改`server.sh`文件。
 
+修改时注意，`#`为注释，需要使用的环境变量需要把`#`去掉。
+
+```shell
+#!/bin/bash
+pip3 install -r ./hexo_circle_of_friends/requirements.txt
+
+### 通用配置
+export LINK="https://www.yyyzyyyz.cn/link/"
+export EXPOSE_PORT=8000
+export RUN_PER_HOURS=6
+#export PROXY=""
+### leancloud配置
+export APPID=""
+export APPKEY=""
+### mysql配置
+#export MYSQL_USERNAME=""
+#export MYSQL_PASSWORD=""
+#export MYSQL_IP=""
+#export MYSQL_DB=""
+
+nohup python3 -u ./hexo_circle_of_friends/run.py > /tmp/crawler.log 2>&1 &
+nohup python3 -u ./api/main.py > /tmp/api.log 2>&1 &
+```
+
+请根据文件中的注释，结合本节说明，修改其中的内容。
+
+- **LINK**：你的友链页地址。
+- **EXPOSE_PORT**：指定api的暴露端口，默认为8000。
+- **RUN_PER_HOURS**：爬虫每隔几小时运行一次，默认为6。此项必须是一个正整数。
+- **PROXY**：HTTP代理，目前只支持添加一个，示例：`192.168.1.106:8080`
+- **APPID**：leancloud的APPID
+- **APPKEY**：leancloud的APPKEY
+- **MYSQL_USERNAME**：mysql登录用户名
+- **MYSQL_PASSWORD**：mysql登录密码
+- **MYSQL_IP**：数据库IP地址
+- **MYSQL_DB**：要连接到的库的名称
+
 ### docker部署
 
 如果采用server部署方式，环境变量配置需要修改`Dockerfile`文件。
+
+修改时注意，`#`为注释，需要使用的环境变量需要把`#`去掉。
+
+```dockerfile
+FROM python:3.8
+MAINTAINER yyyz
+COPY . /
+### 在这里配置环境变量
+### 通用配置
+ENV LINK="https://www.yyyzyyyz.cn/link/"
+ENV RUN_PER_HOURS = 6
+#ENV PROXY=""
+### leancloud配置
+ENV APPID=""
+ENV APPKEY=""
+### mysql配置
+#ENV MYSQL_USERNAME=""
+#ENV MYSQL_PASSWORD=""
+#ENV MYSQL_IP=""
+#ENV MYSQL_DB=""
+EXPOSE 8000
+WORKDIR /
+RUN cd ./hexo_circle_of_friends && pip3 install -r requirements.txt
+CMD bash ./docker.sh
+```
+
+请根据文件中的注释，结合本节说明，修改其中的内容。
+
+- **LINK**：你的友链页地址。
+- **RUN_PER_HOURS**：爬虫每隔几小时运行一次，默认为6。此项必须是一个正整数。
+- **PROXY**：HTTP代理，目前只支持添加一个，示例：`192.168.1.106:8080`
+- **APPID**：leancloud的APPID
+- **APPKEY**：leancloud的APPKEY
+- **MYSQL_USERNAME**：mysql登录用户名
+- **MYSQL_PASSWORD**：mysql登录密码
+- **MYSQL_IP**：数据库IP地址
+- **MYSQL_DB**：要连接到的库的名称
 
 ## 配置示例
 

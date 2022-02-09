@@ -108,28 +108,13 @@ FRIENDPAGE_STRATEGY={
 DEPLOY_TYPE = "server"
 ```
 
-如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
-
 然后编辑仓库中的`server.sh`文件，将`LINK`修改为你的友链链接地址，将`EXPOSE_PORT`修改为你想要对外暴露的端口号，以及：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库选择的是sqlite，不需要配置
 
-```shell
-### 通用配置
-export LINK="https://www.yyyzyyyz.cn/link/"
-export EXPOSE_PORT=8000
-#export PROXY=""
-### leancloud配置
-export APPID=""
-export APPKEY=""
-### mysql配置
-#export MYSQL_USERNAME=""
-#export MYSQL_PASSWORD=""
-#export MYSQL_IP=""
-#export MYSQL_DB=""
-```
+如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
 
 修改完成后，登录进入你的服务器，依次执行：
 
@@ -182,34 +167,13 @@ FRIENDPAGE_STRATEGY={
 DEPLOY_TYPE = "docker"
 ```
 
-如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
-
 然后编辑仓库中的`/Dockerfile`文件，将`LINK`修改为你的友链链接地址，以及：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库选择的是sqlite，不需要配置
 
-```dockerfile
-FROM python:3.8
-MAINTAINER yyyz
-COPY . /
-### 通用配置
-ENV LINK="https://www.yyyzyyyz.cn/link/"
-# ENV PROXY=""
-### leancloud配置
-ENV APPID=""
-ENV APPKEY=""
-### mysql配置
-#ENV MYSQL_USERNAME=""
-#ENV MYSQL_PASSWORD=""
-#ENV MYSQL_IP=""
-#ENV MYSQL_DB=""
-EXPOSE 8000
-WORKDIR /
-RUN cd ./hexo_circle_of_friends && pip3 install -r requirements.txt
-CMD bash ./start.sh
-```
+如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
 
 修改完成后，登录进入你的服务器，依次执行：
 
