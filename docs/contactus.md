@@ -13,4 +13,5 @@
 | RaXianch | https://blog.raxianch.moe/ | 友链朋友圈后端维护，多主题友链抓取适配                       |
 | yyyz     | https://www.yyyzyyyz.cn/   | 4.0方案编写者，多主题友链抓取适配，服务器部署方案编写者，友链朋友圈现维护者 |
 | 林木木   | https://immmmm.com/        | 新版友链朋友圈前端方案编写者                                 |
+| Fox      | https://foolishfox.cn/     | 提供sql api与sql存储本地化方案                               |
 
