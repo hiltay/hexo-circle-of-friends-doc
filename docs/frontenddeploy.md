@@ -2,7 +2,9 @@
 
 ## 方案：林木木
 
-目前推荐[@林木木](https://immmmm.com/hi-friends-circle/)的方案，已经完成与主仓库api的适配。
+目前推荐[@林木木](https://immmmm.com/)的方案，已经完成与主仓库api的适配。
+
+简单介绍部署方法，更多细节请[查看原文](https://immmmm.com/hi-friends-circle/)。
 
 hexo下的部署方法：
 
