@@ -14,11 +14,11 @@
 | server部署 | server+leancloud | server+mysql | server+sqlite |
 | docker部署 | docker+leancloud | docker+mysql | docker+sqlite |
 
-另外，这些后期都能更改，只需要在文件中配置一下，就可以切换到其他部署方案。
+另外，这些后期都能更改，只需要在文件中配置一下，就可以切换到其他部署方案。[查看教程](backenddeploy.md?id=后端部署)
 
 前端部署概览：
 
-
+前端部署比较简单，生成一个页面，引入css和js文件以及配置api即可，[查看教程](frontenddeploy?id=前端部署)
 
 
 

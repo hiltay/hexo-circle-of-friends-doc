@@ -59,7 +59,7 @@ env:
 
 ```shell
 #!/bin/bash
-pip3 install -r ./hexo_circle_of_friends/requirements.txt
+pip3 install -r ./hexo_circle_of_friends/requirements.txt -i https://pypi.douban.com/simple/
 
 ### 通用配置
 export LINK="https://www.yyyzyyyz.cn/link/"
@@ -105,7 +105,7 @@ COPY . /
 ### 在这里配置环境变量
 ### 通用配置
 ENV LINK="https://www.yyyzyyyz.cn/link/"
-ENV RUN_PER_HOURS = 6
+ENV RUN_PER_HOURS=6
 #ENV PROXY=""
 ### leancloud配置
 ENV APPID=""
@@ -117,7 +117,7 @@ ENV APPKEY=""
 #ENV MYSQL_DB=""
 EXPOSE 8000
 WORKDIR /
-RUN cd ./hexo_circle_of_friends && pip3 install -r requirements.txt
+RUN cd ./hexo_circle_of_friends && pip3 install -r requirements.txt -i https://pypi.douban.com/simple/
 CMD bash ./docker.sh
 ```
 
