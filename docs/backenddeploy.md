@@ -95,9 +95,9 @@ FRIENDPAGE_STRATEGY={
 
 部署方法：
 
-fork友链朋友圈的项目仓库，地址：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends
+`clone`项目仓库，地址：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends
 
-在`fork`后仓库中，编辑仓库中的`/hexo_circle_of_friends/setting.py`文件，必须修改的配置如下：
+编辑`/hexo_circle_of_friends/setting.py`文件，必须修改的配置如下：
 
 ```python
 FRIENDPAGE_STRATEGY={
@@ -108,7 +108,7 @@ FRIENDPAGE_STRATEGY={
 DEPLOY_TYPE = "server"
 ```
 
-然后编辑仓库中的`server.sh`文件，将`LINK`修改为你的友链链接地址，将`EXPOSE_PORT`修改为你想要对外暴露的端口号，以及：
+然后编辑`server.sh`文件，将`LINK`修改为你的友链链接地址，将`EXPOSE_PORT`修改为你想要对外暴露的端口号，以及：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
@@ -116,12 +116,11 @@ DEPLOY_TYPE = "server"
 
 如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
 
-修改完成后，登录进入你的服务器，依次执行：
+修改完成后，依次执行：
 
-`clone`你的仓库，进入仓库添加脚本执行权限
+添加脚本执行权限，运行脚本
 
 ```bash
-git clone https://github.com/balabala/hexo-circle-of-friends
 cd hexo-circle-of-friends/
 chmod a+x server.sh
 ./server.sh
@@ -154,9 +153,9 @@ curl 127.0.0.1:8000/all
 
 部署方法：
 
-fork友链朋友圈的项目仓库，地址：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends
+`clone`项目仓库，地址：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends
 
-在`fork`后仓库中，编辑仓库中的`/hexo_circle_of_friends/setting.py`文件，必须修改的配置如下：
+编辑`/hexo_circle_of_friends/setting.py`文件，必须修改的配置如下：
 
 ```python
 FRIENDPAGE_STRATEGY={
@@ -167,7 +166,7 @@ FRIENDPAGE_STRATEGY={
 DEPLOY_TYPE = "docker"
 ```
 
-然后编辑仓库中的`/Dockerfile`文件，将`LINK`修改为你的友链链接地址，以及：
+然后编辑`/Dockerfile`文件，将`LINK`修改为你的友链链接地址，以及：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
@@ -175,12 +174,11 @@ DEPLOY_TYPE = "docker"
 
 如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
 
-修改完成后，登录进入你的服务器，依次执行：
+修改完成后，依次执行：
 
-`clone`你的仓库，进入仓库构建镜像
+构建镜像
 
 ```bash
-git clone https://github.com/balabala/hexo-circle-of-friends
 cd hexo-circle-of-friends/
 docker build -t fcircle .
 ```
