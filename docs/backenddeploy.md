@@ -34,6 +34,7 @@ FRIENDPAGE_STRATEGY={
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库选择的是sqlite，请添加`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`，可以参考[配置示例](settings.md?id=githubsqlite)。
+- 如果数据库选择的是mongodb，请添加`MONGODB_URI`
 
 下面演示使用leancloud的存储方式，首先需要创建leancloud数据库，创建方式见[这里](problems.md?id=如何创建leancloud数据库？)。
 
@@ -113,6 +114,7 @@ DEPLOY_TYPE = "server"
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库选择的是sqlite，不需要配置
+- 如果数据库选择的是mongodb，请添加`MONGODB_URI`
 
 如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
 
@@ -171,6 +173,7 @@ DEPLOY_TYPE = "docker"
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库选择的是sqlite，不需要配置
+- 如果数据库选择的是mongodb，请添加`MONGODB_URI`
 
 如需更换数据库，以及其它更多配置，详见[配置项说明](settings.md)。
 
