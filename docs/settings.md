@@ -9,14 +9,31 @@
 请根据文件中的注释，结合本节说明，修改其中的内容。
 
 - **OUTDATE_CLEAN**：默认为60。超过这个值（距今超过60天）的文章，会在数据库中被删除。
+
 - **FRIENDPAGE_STRATEGY**：友链页的获取策略，配置方法在注释中有详细的说明。
+
 - **SETTINGS_FRIENDS_LINKS**：配置项友链。这是一种通用的方法，如果程序不支持爬取你的友链页，请打开此项。
+
+  - 关于**json_api**选项，4.3.0以后支持通过提供api对友链进行配置，返回格式必须为json，格式如下：
+
+    ```json
+    {"friends":[[友链1],[友链2],[友链3],[友链4]....]}
+    ```
+
+    友链内容同list字段格式。
+
 - **GITEE_FRIENDS_LINKS**：从gitee issues中获取友链信息。
+
 - **GITHUB_FRIENDS_LINKS**：从github issues中获取友链信息。
+
 - **BLOCK_SITE**：屏蔽站点，配置在这里的网址不会被爬取。比如，你的友链页添加了自己，并且不想被爬虫获取，就可以把自己的主页地址屏蔽掉。
+
 - **HTTP_PROXY**：如果想为爬虫设置HTTP代理，将此项设为True，然后根据你选择的数据库不同，添加环境变量。名称为`PROXY`，值为`[IP]:[端口]`，比如：192.168.1.106:8080。**注意，目前只支持添加一个HTTP代理。**
+
 - **EXTRA_FRIENPAGE_LINK**：额外的友链页获取。比如你的友链页为https://www.yyyzyyyz.cn/link/ ，配置在环境变量`LINK`中，你还想同时获取另外一个友链页https://noionion.top/link/ ，就可以把后者添加在这个列表中，并且指定它的获取策略，支持添加多个。
+
 - **DATABASE**：数据的存储方式，目前支持将数据保存在`leancloud`、`mysql`、`sqlite`，默认为`leancloud`。
+
 - **DEPLOY_TYPE**：整个项目的部署方式，目前支持将项目部署在`github`、`server`、`docker`，默认为`github`。
 
 ## 环境变量配置
@@ -47,6 +64,8 @@ env:
   GITHUB_NAME: ${{ secrets.GH_NAME }} # 你的github昵称
   GITHUB_EMAIL: ${{ secrets.GH_EMAIL }} # 你的github邮箱
   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # github token
+  # mongodb配置
+  MONGODB_URI: ${{ secrets.MONGODB_URI }}  # mongodb URI 支持'mongodb://'和'mongodb+srv://'
 ```
 
 比如，如果使用sqlite，仓库需要添加的secert为：`LINK`，`GITHUB_NAME`，`GITHUB_EMAIL`，`GITHUB_TOKEN`。
@@ -74,7 +93,8 @@ export APPKEY=""
 #export MYSQL_PASSWORD=""
 #export MYSQL_IP=""
 #export MYSQL_DB=""
-
+### mongodb配置
+#export MONGODB_URI=""
 nohup python3 -u ./hexo_circle_of_friends/run.py > /tmp/crawler.log 2>&1 &
 nohup python3 -u ./api/main.py > /tmp/api.log 2>&1 &
 ```
@@ -91,6 +111,7 @@ nohup python3 -u ./api/main.py > /tmp/api.log 2>&1 &
 - **MYSQL_PASSWORD**：mysql登录密码
 - **MYSQL_IP**：数据库IP地址
 - **MYSQL_DB**：要连接到的库的名称
+- **MONGODB_URI**：连接mongodb的连接字符串URI，支持`mongodb://`和`mongodb+srv://`
 
 ### docker部署
 
@@ -115,6 +136,8 @@ ENV APPKEY=""
 #ENV MYSQL_PASSWORD=""
 #ENV MYSQL_IP=""
 #ENV MYSQL_DB=""
+### mongodb配置
+#ENV MONGODB_URI=""
 EXPOSE 8000
 WORKDIR /
 RUN cd ./hexo_circle_of_friends && pip3 install -r requirements.txt -i https://pypi.douban.com/simple/
@@ -132,6 +155,7 @@ CMD bash ./docker.sh
 - **MYSQL_PASSWORD**：mysql登录密码
 - **MYSQL_IP**：数据库IP地址
 - **MYSQL_DB**：要连接到的库的名称
+- **MONGODB_URI**：连接mongodb的连接字符串URI，支持`mongodb://`和`mongodb+srv://`
 
 ## 配置示例
 
