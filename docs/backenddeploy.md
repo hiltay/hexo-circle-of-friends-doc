@@ -63,6 +63,7 @@ FRIENDPAGE_STRATEGY={
 - 如果数据库使用leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库使用mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库使用sqlite，不需要配置
+- 如果数据库选择的是mongodb，请添加`MONGODB_URI`
 
 添加完成后，点击`Deploy`。
 
