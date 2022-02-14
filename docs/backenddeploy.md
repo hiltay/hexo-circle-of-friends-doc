@@ -19,17 +19,19 @@ fork友链朋友圈的项目仓库，地址：https://github.com/Rock-Candy-Tea/
 在`fork`后仓库中，编辑仓库中的`/hexo_circle_of_friends/setting.py`文件，必须修改的配置如下：
 
 ```python
-FRIENDPAGE_STRATEGY={
-    "strategy": "default",
-    "theme": "butterfly"  # 请修改为您的主题
-}
+LINK = [
+        {
+        "link":"https://www.yyyzyyyz.cn/link/",  # 友链页地址1，修改为你的友链页地址
+        "theme":"butterfly"  # 友链页地址为https://www.yyyzyyyz.cn/link/，即为butterfly主题，以此类推
+    },
+]
 ```
 
 然后点击仓库的`Settings-->Secrets-->New repository secret`
 
 ![QQ图片20220205080305](QQ图片20220205080305.png)
 
-添加环境变量，secert中必须添加你的友链链接地址`LINK`，以及：
+添加环境变量secert：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
@@ -102,15 +104,18 @@ FRIENDPAGE_STRATEGY={
 编辑`/hexo_circle_of_friends/setting.py`文件，必须修改的配置如下：
 
 ```python
-FRIENDPAGE_STRATEGY={
-    "strategy": "default",
-    "theme": "butterfly"  # 请修改为您的主题
-}
+LINK = [
+        {
+        "link":"https://www.yyyzyyyz.cn/link/",  # 友链页地址1，修改为你的友链页地址
+        "theme":"butterfly"  # 友链页地址为https://www.yyyzyyyz.cn/link/，即为butterfly主题，以此类推
+    },
+
+]
 
 DEPLOY_TYPE = "server"
 ```
 
-然后编辑`server.sh`文件，将`LINK`修改为你的友链链接地址，将`EXPOSE_PORT`修改为你想要对外暴露的端口号，以及：
+然后编辑`server.sh`文件，将`EXPOSE_PORT`修改为你想要对外暴露的端口号，以及：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
@@ -161,15 +166,18 @@ curl 127.0.0.1:8000/all
 编辑`/hexo_circle_of_friends/setting.py`文件，必须修改的配置如下：
 
 ```python
-FRIENDPAGE_STRATEGY={
-    "strategy": "default",
-    "theme": "butterfly"  # 请修改为您的主题
-}
+LINK = [
+        {
+        "link":"https://www.yyyzyyyz.cn/link/",  # 友链页地址1，修改为你的友链页地址
+        "theme":"butterfly"  # 友链页地址为https://www.yyyzyyyz.cn/link/，即为butterfly主题，以此类推
+    },
+
+]
 
 DEPLOY_TYPE = "docker"
 ```
 
-然后编辑`/Dockerfile`文件，将`LINK`修改为你的友链链接地址，以及：
+然后编辑`Dockerfile`文件：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
 - 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`

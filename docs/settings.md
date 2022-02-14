@@ -10,7 +10,7 @@
 
 - **OUTDATE_CLEAN**：默认为60。超过这个值（距今超过60天）的文章，会在数据库中被删除。
 
-- **FRIENDPAGE_STRATEGY**：友链页的获取策略，配置方法在注释中有详细的说明。
+- **LINK**：起始的友链页面和爬取策略，支持添加多个，详细见注释说明。
 
 - **SETTINGS_FRIENDS_LINKS**：配置项友链。这是一种通用的方法，如果程序不支持爬取你的友链页，请打开此项。
 
@@ -30,8 +30,6 @@
 
 - **HTTP_PROXY**：如果想为爬虫设置HTTP代理，将此项设为True，然后根据你选择的数据库不同，添加环境变量。名称为`PROXY`，值为`[IP]:[端口]`，比如：192.168.1.106:8080。**注意，目前只支持添加一个HTTP代理。**
 
-- **EXTRA_FRIENPAGE_LINK**：额外的友链页获取。比如你的友链页为https://www.yyyzyyyz.cn/link/ ，配置在环境变量`LINK`中，你还想同时获取另外一个友链页https://noionion.top/link/ ，就可以把后者添加在这个列表中，并且指定它的获取策略，支持添加多个。
-
 - **DATABASE**：数据的存储方式，目前支持将数据保存在`leancloud`、`mysql`、`sqlite`，默认为`leancloud`。
 
 - **DEPLOY_TYPE**：整个项目的部署方式，目前支持将项目部署在`github`、`server`、`docker`，默认为`github`。
@@ -49,7 +47,6 @@ env:
   # 在这里查看需要添加的secert
   # 通用配置
   STORAGE_TYPE: leancloud # 请修改为你的存储方式，默认为leancloud
-  LINK: ${{ secrets.LINK }} # 必须，你的友链链接地址
   PROXY: ${{ secrets.PROXY }} # 可选，http代理
   # leancloud、mysql、sqlite配置三选一即可
   # leancloud配置
@@ -68,7 +65,7 @@ env:
   MONGODB_URI: ${{ secrets.MONGODB_URI }}  # mongodb URI 支持'mongodb://'和'mongodb+srv://'
 ```
 
-比如，如果使用sqlite，仓库需要添加的secert为：`LINK`，`GITHUB_NAME`，`GITHUB_EMAIL`，`GITHUB_TOKEN`。
+比如，如果使用sqlite，仓库需要添加的secert为：`GITHUB_NAME`，`GITHUB_EMAIL`，`GITHUB_TOKEN`。
 
 ### server部署
 
@@ -81,7 +78,6 @@ env:
 pip3 install -r ./hexo_circle_of_friends/requirements.txt -i https://pypi.douban.com/simple/
 
 ### 通用配置
-export LINK="https://www.yyyzyyyz.cn/link/"
 export EXPOSE_PORT=8000
 export RUN_PER_HOURS=6
 #export PROXY=""
@@ -101,7 +97,6 @@ nohup python3 -u ./api/main.py > /tmp/api.log 2>&1 &
 
 请根据文件中的注释，结合本节说明，修改其中的内容。
 
-- **LINK**：你的友链页地址。
 - **EXPOSE_PORT**：指定api的暴露端口，默认为8000。
 - **RUN_PER_HOURS**：爬虫每隔几小时运行一次，默认为6。此项必须是一个正整数。
 - **PROXY**：HTTP代理，目前只支持添加一个，示例：`192.168.1.106:8080`
@@ -125,7 +120,6 @@ MAINTAINER yyyz
 COPY . /
 ### 在这里配置环境变量
 ### 通用配置
-ENV LINK="https://www.yyyzyyyz.cn/link/"
 ENV RUN_PER_HOURS=6
 #ENV PROXY=""
 ### leancloud配置
@@ -146,7 +140,6 @@ CMD bash ./docker.sh
 
 请根据文件中的注释，结合本节说明，修改其中的内容。
 
-- **LINK**：你的友链页地址。
 - **RUN_PER_HOURS**：爬虫每隔几小时运行一次，默认为6。此项必须是一个正整数。
 - **PROXY**：HTTP代理，目前只支持添加一个，示例：`192.168.1.106:8080`
 - **APPID**：leancloud的APPID
@@ -181,7 +174,7 @@ env:
   STORAGE_TYPE: sqlite # 如果不配置，默认为leancloud
 ```
 
-添加secert：`LINK`，`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`
+添加secert：`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`
 
 `GH_TOKEN`获取方式，请参考[官方文档](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)，其中，`Select scopes`选择`repo`。
 
@@ -199,20 +192,22 @@ DATABASE = "mysql"
 DEPLOY_TYPE = "docker"
 ```
 
-修改`Dockerfile`文件的`LINK`，以及mysql部分的配置：
+修改`Dockerfile`文件的mysql部分配置：
 
 ```dockerfile
 ### 在这里配置环境变量
 ### 通用配置
-ENV LINK="https://www.yyyzyyyz.cn/link/"
+ENV RUN_PER_HOURS=6
 #ENV PROXY=""
 ### leancloud配置
-#ENV APPID=""
-#ENV APPKEY=""
+ENV APPID=""
+ENV APPKEY=""
 ### mysql配置
 ENV MYSQL_USERNAME="root"
 ENV MYSQL_PASSWORD="xxxx"
 ENV MYSQL_IP="xx.xx.xx.xx"
 ENV MYSQL_DB="test"
+### mongodb配置
+#ENV MONGODB_URI=""
 ```
 
