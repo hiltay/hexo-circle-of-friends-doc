@@ -12,7 +12,7 @@
 | ---------- | ---------------- | ------------ | ------------- | -------------- |
 | github部署 | github+leancloud | github+mysql | github+sqlite | github+mongodb |
 | server部署 | server+leancloud | server+mysql | server+sqlite | server+mongodb |
-| docker部署 | docker+leancloud | docker+mysql | server+sqlite | server+mongodb |
+| docker部署 | docker+leancloud | docker+mysql | docker+sqlite | docker+mongodb |
 
 另外，这些后期都能更改，只需要在文件中配置一下，就可以切换到其他部署方案。[查看教程](backenddeploy.md?id=后端部署)
 
