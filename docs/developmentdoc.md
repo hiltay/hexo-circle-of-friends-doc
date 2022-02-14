@@ -47,9 +47,11 @@
 使用时，只需要在`settings.py`配置文件中配置为`common`即可：
 
 ```python
-FRIENDPAGE_STRATEGY={
-    "strategy": "default",
-    "theme": "common"  # 请修改为您的主题
-}
+LINK = [
+         {
+         "link": "https://immmmm.com/about/", 
+         "theme": "common",  # 友链页的获取策略
+     },
+]
 ```
 
