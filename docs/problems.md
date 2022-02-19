@@ -73,6 +73,8 @@ kill -9 7584
 kill -9 7585
 ```
 
+4.3.1版本增加了一个自动部署脚本，使用`python3 deploy.py`命令可以打开它，里面会有一键取消运行的选项。
+
 ### 如何查看运行日志？
 
 爬虫和api程序的日志文件分别保存在`/tmp/crawler.log`和`/tmp/api.log`中，可以通过命令查看：
@@ -136,6 +138,16 @@ systemctl enable docker
 cat /tmp/api.log
 cat /tmp/crawler.log
 ```
+
+### 如何取消运行？
+
+```bash
+docker ps -a # 查看容器
+docker stop 容器id && docker rm 容器id  # 删掉对应容器
+docker rmi 镜像id  # 删掉镜像
+```
+
+4.3.1版本增加了一个自动部署脚本，使用`python3 deploy.py`命令可以打开它，里面会有一键取消运行的选项。
 
 ## 其他问题
 
