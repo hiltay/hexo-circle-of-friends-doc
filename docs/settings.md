@@ -211,6 +211,7 @@ ENV APPKEY=""
 ENV MYSQL_USERNAME="root"
 ENV MYSQL_PASSWORD="xxxx"
 ENV MYSQL_IP="xx.xx.xx.xx"
+ENV MYSQL_PORT="xxxx"
 ENV MYSQL_DB="test"
 ### mongodb配置
 #ENV MONGODB_URI=""
