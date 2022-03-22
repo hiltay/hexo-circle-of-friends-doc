@@ -56,6 +56,7 @@ env:
   MYSQL_USERNAME: ${{ secrets.MYSQL_USERNAME }} # 登录用户名
   MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }} # 登录密码
   MYSQL_IP: ${{ secrets.MYSQL_IP }} # 数据库IP地址
+  MYSQL_PORT: ${{ secrets.MYSQL_PORT }} # 数据库端口号
   MYSQL_DB: ${{ secrets.MYSQL_DB }} # 要连接到的库的名称
   # sqlite配置，用于将db文件上传到github仓库
   GITHUB_NAME: ${{ secrets.GH_NAME }} # 你的github昵称
@@ -88,6 +89,7 @@ export APPKEY=""
 #export MYSQL_USERNAME=""
 #export MYSQL_PASSWORD=""
 #export MYSQL_IP=""
+#export MYSQL_PORT=""
 #export MYSQL_DB=""
 ### mongodb配置
 #export MONGODB_URI=""
@@ -105,6 +107,7 @@ nohup python3 -u ./api/main.py > /tmp/api.log 2>&1 &
 - **MYSQL_USERNAME**：mysql登录用户名
 - **MYSQL_PASSWORD**：mysql登录密码
 - **MYSQL_IP**：数据库IP地址
+- **MYSQL_PORT**：数据库端口
 - **MYSQL_DB**：要连接到的库的名称
 - **MONGODB_URI**：连接mongodb的连接字符串URI，支持`mongodb://`和`mongodb+srv://`
 
@@ -129,6 +132,7 @@ ENV APPKEY=""
 #ENV MYSQL_USERNAME=""
 #ENV MYSQL_PASSWORD=""
 #ENV MYSQL_IP=""
+#ENV MYSQL_PORT=""
 #ENV MYSQL_DB=""
 ### mongodb配置
 #ENV MONGODB_URI=""
@@ -147,12 +151,9 @@ CMD bash ./docker.sh
 - **MYSQL_USERNAME**：mysql登录用户名
 - **MYSQL_PASSWORD**：mysql登录密码
 - **MYSQL_IP**：数据库IP地址
+- **MYSQL_PORT**：数据库端口
 - **MYSQL_DB**：要连接到的库的名称
 - **MONGODB_URI**：连接mongodb的连接字符串URI，支持`mongodb://`和`mongodb+srv://`
-
-### 补充
-
-对于mysql没有添加端口配置，目前连接所使用的端口只能为3306，预计在下个版本（4.3.2）会添加该配置。
 
 ## 配置示例
 
