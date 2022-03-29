@@ -36,7 +36,7 @@ LINK = [
 添加环境变量secert：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
-- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
+- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，连接端口`MYSQL_PORT`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库选择的是sqlite，请添加`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`，可以参考[配置示例](settings.md?id=githubsqlite)。
 - 如果数据库选择的是mongodb，请添加`MONGODB_URI`
 
@@ -120,7 +120,7 @@ DEPLOY_TYPE = "server"
 然后编辑`server.sh`文件，将`EXPOSE_PORT`修改为你想要对外暴露的端口号，以及：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
-- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
+- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，连接端口`MYSQL_PORT`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库选择的是sqlite，不需要配置
 - 如果数据库选择的是mongodb，请添加`MONGODB_URI`
 
@@ -182,7 +182,7 @@ DEPLOY_TYPE = "docker"
 然后编辑`Dockerfile`文件：
 
 - 如果数据库选择的是leancloud，请添加`APPID`和`APPKEY`
-- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，要连接到的库的名称`MYSQL_DB`
+- 如果数据库选择的是mysql，请添加登录用户名`MYSQL_USERNAME`，登录密码`MYSQL_PASSWORD`，数据库IP地址`MYSQL_IP`，连接端口`MYSQL_PORT`，要连接到的库的名称`MYSQL_DB`
 - 如果数据库选择的是sqlite，不需要配置
 - 如果数据库选择的是mongodb，请添加`MONGODB_URI`
 
