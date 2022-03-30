@@ -74,7 +74,7 @@ env:
   MONGODB_URI: ${{ secrets.MONGODB_URI }}  # mongodb URI 支持'mongodb://'和'mongodb+srv://'
 ```
 
-比如，如果使用sqlite，仓库需要添加的secert为：`GITHUB_NAME`，`GITHUB_EMAIL`，`GITHUB_TOKEN`。
+比如，如果使用sqlite，仓库需要添加的secert为：`GH_NAME`，`GH_EMAIL`，`GH_TOKEN`。
 
 ### server部署
 
