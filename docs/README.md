@@ -6,7 +6,7 @@
 
 ### 使用leancloud数据库存储的用户注意：
 
-以下内容来自于[leancloud官网](https://leancloud.app/)，为了避免朋友圈部署受到影响，请及时切换存储方式。
+以下内容来自于[leancloud官网](https://leancloud.app/)，如果使用leancloud的朋友圈部署受到影响，建议及时切换存储方式，或按照官方提示操作。
 
 无服务器，可以切换到vercel+sqlite或者vercel+mongodb，详见[项目部署](deploy.md)
 
