@@ -121,7 +121,7 @@ nohup python3 -u ./api/main.py > /tmp/api.log 2>&1 &
 
 ### docker部署
 
-如果采用server部署方式，环境变量配置需要修改`Dockerfile`文件。
+如果采用docker部署方式，环境变量配置需要修改`Dockerfile`文件。
 
 修改时注意，`#`为注释，需要启用的环境变量请把`#`去掉。
 
