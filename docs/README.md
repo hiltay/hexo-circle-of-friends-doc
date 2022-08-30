@@ -1,8 +1,18 @@
 # 友链朋友圈
 
-> 最后更新于：2022-08-28
+> 最后更新于：2022-08-30
 
 你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况 。
+
+<div class="fc"><img src="./fcircle.png" alt="fcircle" /></div>
+<style>
+.fc{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+</style>
+
 
 ### vercel遭遇域名污染的通知
 
