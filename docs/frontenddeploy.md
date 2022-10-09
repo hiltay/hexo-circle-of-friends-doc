@@ -33,13 +33,23 @@ date: 2022-10-09 00:38:16
         sort_rule: 'created'
     }
 </script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hiltay/imgcdn@master/fcircle/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hiltay/imgcdn@master/fcircle/app.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.31/fcircle/app.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.31/fcircle/bundle.js"></script>
 ```
 
 访问域名下的`/fcircle`即可看到效果。
 
-如果觉得jsdelivr比较慢，可以手动将这两个js文件放到你认为更快的cdn上。
+如果觉得该cdn比较慢，可以手动将这两个js文件放到你认为更快的cdn上。
+
+新版前端在顶部右下角卡片新增管理面板：
+
+![image-20221009101639407](image-20221009101639407.png)
+
+点击即可进入。第一次部署成功后，输入第一个密码的同时设置密码。请设置一个安全可靠的密码，并防止泄露。
+
+当保存设置时，由于网络原因，可能需要一段时间响应，尽量避免连续保存。
+
+除了在管理面板配置之外，朋友圈同样支持修改配置文件进行配置，详见[配置项说明](settings.md)。
 
 ## 方案：林木木
 
