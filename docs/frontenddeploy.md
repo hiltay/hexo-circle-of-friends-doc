@@ -33,13 +33,13 @@ date: 2022-10-09 00:38:16
         sort_rule: 'created'
     }
 </script>
-<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.28/fcircle/app.min.js"></script>
-<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.28/fcircle/bundle.js"></script>
+<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.29/fcircle/app.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.29/fcircle/bundle.js"></script>
 ```
 
 访问域名下的`/fcircle`即可看到效果。
 
-如果觉得jsdelivr比较慢，可以手动将这两个js文件放到你认为更快的cdn上。
+如果觉得该cdn比较慢，可以手动将这两个js文件放到你认为更快的cdn上。
 
 新版前端在顶部右下角卡片新增管理面板：
 
