@@ -33,8 +33,8 @@ date: 2022-10-09 00:38:16
         sort_rule: 'created'
     }
 </script>
-<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.31/fcircle/app.min.js"></script>
-<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.31/fcircle/bundle.js"></script>
+<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.33/fcircle/app.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.33/fcircle/bundle.js"></script>
 ```
 
 访问域名下的`/fcircle`即可看到效果。
