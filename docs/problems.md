@@ -156,3 +156,44 @@ docker rmi 镜像id  # 删掉镜像
 ### mysql数据库字符集报错
 
 见[issues/25](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/issues/25)，如果所爬取的数据中含有emoji表情，请设置mysql字符集为`utf8mb4`，否则会报`Incorrect string value`错误。
+
+### 5.x前端在volantis主题显示的问题
+
+见[issues/65](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/issues/65)， 修改`source/fcircle/index.md` 文件如下：
+
+```markdown
+---
+title: 朋友圈
+date: 2022-10-09 00:38:16
+---
+
+<div id="app"></div>
+<script>
+    let UserConfig = {
+        // 填写你的api地址
+        private_api_url: 'http://192.168.142.88:8000/',
+        // 点击加载更多时，一次最多加载几篇文章，默认10
+        page_turning_number: 10,
+        // 头像加载失败时，默认头像地址
+        error_img: 'https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c',
+        // 进入页面时第一次的排序规则
+        sort_rule: 'created'
+    }
+</script>
+<style>
+article#page {
+    transform: none;
+    transition: none;
+    backdrop-filter: none;
+}
+<style>
+<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.33/fcircle/app.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/browse/imgscdn@1.1.33/fcircle/bundle.js"></script>
+```
+
+
+
+
+
+
+

@@ -82,7 +82,7 @@ LINK:
 
 等待运行完毕后，仓库应该会上传`data.db`，并且vercel也会同步更新。
 
-前往vercel，在项目中找到`DOMAINS`下面的地址，如：https://hexo-friendcircle4-api.vercel.app，前端需要的就是这个地址（注：本来只需要这个地址，但由于vercel被墙，需要绑定自定义域名后，使用自定义域名的地址）。在这个地址后面拼接`/all`尝试访问，出现数据就说明配置成功，这个地址就是前端所需的api地址。
+前往vercel，在项目中找到`DOMAINS`下面的地址，如：https://hexo-friendcircle4-api.vercel.app，  （注：本来只需要这个地址，但由于vercel被墙，需要绑定自定义域名后，使用自定义域名的地址）。在这个地址后面拼接`/all`尝试访问，出现数据就说明配置成功，这个地址就是前端所需的api地址。
 
 ![QQ截图20220205083633](QQ截图20220205083633.png)
 
