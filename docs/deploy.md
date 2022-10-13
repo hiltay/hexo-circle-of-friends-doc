@@ -27,8 +27,7 @@
 如果你有选择困难症，请参考如下几条进行选择：
 
 - 总体来说，私有部署（server/docker）稳定性高于github部署
-- sqlite是本地数据库，部署简单且速度较快，建议优先考虑
-- mongodb、mysql在超大批量数据的表现优于sqlite（在朋友圈的使用场景下，远达不到sqlite的使用瓶颈）
+- sqlite是本地数据库，占用空间小，轻量级，部署简单且速度较快，在吞吐量、数据量不大的朋友圈使用场景下，建议优先考虑
 - mongodb有免费的云服务，没有服务器也不想用sqlite，则可以选择github+mongodb，https://www.mongodb.com/atlas/database
 - leancloud位于海外，访问速度较慢，除非没得选，否则不推荐
 
