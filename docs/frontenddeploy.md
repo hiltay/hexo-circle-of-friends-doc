@@ -33,8 +33,8 @@ date: 2022-10-09 00:38:16
         sort_rule: 'created'
     }
 </script>
-<script type="text/javascript" src="https://npm.elemecdn.com/imgscdn@1.1.39/fcircle/app.min.js"></script>
-<script type="text/javascript" src="https://npm.elemecdn.com/imgscdn@1.1.39/fcircle/bundle.js"></script>
+<script type="text/javascript" src="https://npm.elemecdn.com/imgscdn@1.1.42/fcircle/app.min.js"></script>
+<script type="text/javascript" src="https://npm.elemecdn.com/imgscdn@1.1.42/fcircle/bundle.js"></script>
 ```
 
 访问域名下的`/fcircle`即可看到效果。
