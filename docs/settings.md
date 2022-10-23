@@ -91,12 +91,12 @@ env:
 - 如果使用mysql，仓库需要添加的secret为：`STORAGE_TYPE`，`MYSQL_USERNAME`，`MYSQL_PASSWORD`，`MYSQL_IP`，`MYSQL_PORT`，`MYSQL_DB`，其中`STORAGE_TYPE`的值为`mysql`。
 - 如果使用mongodb，仓库需要添加的secret为：`STORAGE_TYPE`，`MONGODB_URI`，其中`STORAGE_TYPE`的值为`mongodb`。
 
-github环境变量设置完毕后，还需要设置vercel环境变量，其中必须添加`VERCEL_ACCESS_TOKEN`和`GH_TOKEN`，以提供后端管理的访问权限，同样根据你的存储方式不同：
+github环境变量设置完毕后，还需要设置vercel环境变量，其中必须添加`VERCEL_ACCESS_TOKEN`，`GH_TOKEN`，`GH_NAME`，`GH_EMAIL`，以提供后端管理的访问权限，同样根据你的存储方式不同：
 
 - 如果使用sqlite，vercel需要添加的环境变量为：`VERCEL_ACCESS_TOKEN`，`GH_TOKEN`，`GH_NAME`，`GH_EMAIL`
-- 如果使用leancloud，vercel需要添加的环境变量为：`VERCEL_ACCESS_TOKEN`，`GH_TOKEN`，`APPID`，`APPKEY`
-- 如果使用mysql，vercel需要添加的环境变量为：`VERCEL_ACCESS_TOKEN`，`GH_TOKEN`，`MYSQL_USERNAME`，`MYSQL_PASSWORD`，`MYSQL_IP`，`MYSQL_PORT`，`MYSQL_DB`
-- 如果使用mongodb，vercel需要添加的环境变量为：`VERCEL_ACCESS_TOKEN`，`GH_TOKEN`，`MONGODB_URI`
+- 如果使用leancloud，vercel需要添加的环境变量为：`VERCEL_ACCESS_TOKEN`，`GH_TOKEN`，`GH_NAME`，`GH_EMAIL`，`APPID`，`APPKEY`
+- 如果使用mysql，vercel需要添加的环境变量为：`VERCEL_ACCESS_TOKEN`，`GH_TOKEN`，`GH_NAME`，`GH_EMAIL`，`MYSQL_USERNAME`，`MYSQL_PASSWORD`，`MYSQL_IP`，`MYSQL_PORT`，`MYSQL_DB`
+- 如果使用mongodb，vercel需要添加的环境变量为：`VERCEL_ACCESS_TOKEN`，`GH_TOKEN`，`GH_NAME`，`GH_EMAIL`，`MONGODB_URI`
 
 ### server部署/docker部署
 
