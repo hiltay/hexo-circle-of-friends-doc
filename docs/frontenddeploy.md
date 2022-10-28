@@ -33,8 +33,9 @@ date: 2022-10-09 00:38:16
         sort_rule: 'created'
     }
 </script>
-<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@latest/dist/app.min.js"></script>
-<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@latest/dist/bundle.js"></script>
+https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.0/dist/app.min.js
+<script type="text/javascript" src="https://unpkg.com/browse/fcircle-theme-yyyz@1.0.1/dist/app.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/browse/fcircle-theme-yyyz@1.0.1/dist/bundle.js"></script>
 ```
 
 访问域名下的`/fcircle`即可看到效果。
