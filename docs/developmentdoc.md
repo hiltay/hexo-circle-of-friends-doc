@@ -57,7 +57,7 @@
     </a>
 ```
 
-使用时，只需要在`settings.py`配置文件中配置为`common1`或者`common2`即可：
+使用时，只需要在`fc_settings.yaml`配置文件中配置为`common1`或者`common2`即可：
 
 ```python
 LINK = [
@@ -79,7 +79,7 @@ LINK = [
 
 ## 配置项json友链
 
-在`settings.py`中的配置项友链`SETTINGS_FRIENDS_LINKS`主要针对还未适配主题或者有**定制需求**的用户，这里对`json_api`的用法作一个详细的说明。
+在`fc_settings.yaml`中的配置项友链`SETTINGS_FRIENDS_LINKS`主要针对还未适配主题或者有**定制需求**的用户，这里对`json_api`的用法作一个详细的说明。
 
 配置`json_api`可以使爬虫能够根据你指定的api接口获取到对应的json格式友链，例如：
 
