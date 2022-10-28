@@ -13,6 +13,12 @@ LINK:
     - {link: "https://www.yyyzyyyz.cn/link/", theme: "butterfly"}  # link改为你的友链页地址，theme选择你的博客主题
 ```
 
+编辑`.github/workflows/main.yml`文件，将`SIMPLE_MODE`设置为`true`：
+
+```yaml
+SIMPLE_MODE: true # 极简模式是否开启
+```
+
 启用`fork`后仓库的github action，点击`Actions-->I understand my workflows, go ahead and enable them`
 
 ![QQ截图20220205081120](QQ截图20220205081120.png)
