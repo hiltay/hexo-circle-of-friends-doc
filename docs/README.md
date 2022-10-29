@@ -1,6 +1,6 @@
 # 友链朋友圈
 
-> 最后更新于：2022-10-23
+> 最后更新于：2022-10-29
 
 你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况 。
 
@@ -34,6 +34,8 @@ justify-content: center;
 
 ## 功能概览
 
+- 新增前端管理面板，告别繁琐的配置，管理朋友圈更加方便
+- 增加极简模式
 - 支持 gitee 和 github 上的 issues 友链获取
 - 支持butterfly、volantis、matery、sakura、fluid、nexmoe、Yun、stun、stellar、next主题的友链和文章获取
 - 支持feed订阅规则，如atom、rss等规则（支持wordpress类型的博客）
