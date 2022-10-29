@@ -63,6 +63,7 @@
 env:
   # 在这里查看需要添加的secret
   # 通用配置
+  SIMPLE_MODE: false # 极简模式是否开启
   STORAGE_TYPE: ${{ secrets.STORAGE_TYPE }}  # 根据你选择的存储添加：sqlite、leancloud、mysql、mongodb
   PROXY: ${{ secrets.PROXY }} # 可选，http代理
   # leancloud、mysql、sqlite配置三选一即可
