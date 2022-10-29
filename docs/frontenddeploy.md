@@ -34,8 +34,8 @@ date: 2022-10-09 00:38:16
     }
 </script>
 
-<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.2/dist/app.min.js"></script>
-<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.2/dist/bundle.js"></script>
+<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.3/dist/app.min.js"></script>
+<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.3/dist/bundle.js"></script>
 ```
 
 访问域名下的`/fcircle`即可看到效果。
