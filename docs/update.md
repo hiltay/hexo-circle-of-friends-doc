@@ -44,13 +44,23 @@ python3 deploy.py
 
 server部署：
 
-直接保存项目根目录下的`data.db`和`dump_settings.yaml`即可。
+直接保存项目根目录下的
+
+- `data.db`：sqlite数据库
+- `dump_settings.yaml`：通过管理面板操作后的项目配置
+- `env.json`：通过管理面板操作后的环境变量
 
 docker部署：
 
 ```bash
 docker cp circle:/home/fcircle_src/data.db [宿主机需要导出的路径]
 docker cp circle:/home/fcircle_src/dump_settings.yaml [宿主机需要导出的路径]
+docker cp circle:/home/fcircle_src/env.json [宿主机需要导出的路径]
+# 比如，将他们保存在/tmp/fcircle_bak/下，复制如下命令运行：
+mkdir -p /tmp/fcircle_bak/ && \
+docker cp circle:/home/fcircle_src/data.db /tmp/fcircle_bak/ && \
+docker cp circle:/home/fcircle_src/dump_settings.yaml /tmp/fcircle_bak/ && \
+docker cp circle:/home/fcircle_src/env.json /tmp/fcircle_bak/
 ```
 
 
