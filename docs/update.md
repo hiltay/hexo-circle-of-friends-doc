@@ -38,6 +38,21 @@ python3 deploy.py
 
 前往[前端部署](frontenddeploy)获取最新cdn。
 
+## 导出配置文件和数据
+
+更新版本时，为了保留配置，需要手动将配置导出，（使用sqlite的，还需要将数据库文件导出）。
+
+server部署：
+
+直接保存项目根目录下的`data.db`和`dump_settings.yaml`即可。
+
+docker部署：
+
+```bash
+docker cp circle:/home/fcircle_src/data.db [宿主机需要导出的路径]
+docker cp circle:/home/fcircle_src/dump_settings.yaml [宿主机需要导出的路径]
+```
+
 
 
 ## 注意事项
