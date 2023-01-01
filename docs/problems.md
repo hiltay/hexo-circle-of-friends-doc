@@ -50,6 +50,12 @@ python3 --version
 
 出现版本号即安装成功。
 
+安装yaml：
+
+```bash
+pip3 install pyyaml
+```
+
 ### 如何安装git？
 
 ```bash
