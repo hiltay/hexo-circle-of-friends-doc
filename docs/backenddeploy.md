@@ -38,6 +38,10 @@ LINK:
 
 ![image-20221009000607317](image-20221009000607317.png)
 
+然后点击仓库的`setting-->Actions-->General-->勾选Read and write permissions-->Save`
+
+![](workflow_permissions.png)
+
 前往[vercel官网](https://vercel.com/)，直接用github创建账号并用手机号绑定。
 
 点击`New Project`新建项目

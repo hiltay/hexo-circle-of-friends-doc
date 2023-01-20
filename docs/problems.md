@@ -16,6 +16,16 @@
 
 ![QQ截图20220205075547](QQ截图20220205075547.png)
 
+### sqlite或者data.json无法上传至仓库的问题
+
+见[issues/87](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/issues/87)，github仓库更新了默认的权限，fork后的仓库似乎只保留`read`权限，导致仓库无法上传文件。
+
+可尝试以下方案：
+
+点击仓库的`setting-->Actions-->General-->勾选Read and write permissions-->Save`
+
+![](workflow_permissions.png)
+
 ## server部署的相关问题
 
 ### 如何安装python环境？
@@ -176,8 +186,6 @@ article#page {
 }
 </style>
 ```
-
-
 
 
 
