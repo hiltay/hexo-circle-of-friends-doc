@@ -19,6 +19,10 @@ LINK:
 SIMPLE_MODE: true # 极简模式是否开启
 ```
 
+然后点击仓库的`setting-->Actions-->General-->勾选Read and write permissions-->Save`
+
+![](workflow_permissions.png)
+
 启用`fork`后仓库的github action，点击`Actions-->I understand my workflows, go ahead and enable them`
 
 ![QQ截图20220205081120](QQ截图20220205081120.png)
