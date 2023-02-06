@@ -6,6 +6,8 @@
 
 ## github部署
 
+> ⚠⚠⚠⚠⚠注意：如果前端部署采用[带管理面板的前端方案](frontenddeploy.md)，则fork时**不要修改仓库名称**，否则会导致管理面板部分功能不可用。
+
 ### github+sqlite部署
 
 这是默认的部署方式，即：github+sqlite+vercel
