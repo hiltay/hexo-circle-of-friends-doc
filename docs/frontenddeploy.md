@@ -32,7 +32,7 @@ date: 2022-10-09 00:38:16
 <script>
     let UserConfig = {
         // 填写你的api地址
-        private_api_url: 'https://www.yyyzyyyz.cn/api/',
+        private_api_url: 'http://127.0.0.1:8000/',
         // 初始加载几篇文章
         page_init_number: 20,
         // 点击加载更多时，一次最多加载几篇文章，默认10
