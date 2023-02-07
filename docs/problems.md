@@ -93,13 +93,13 @@ kill -9 7585
 
 ### 如何查看运行日志？
 
-爬虫和api程序的运行日志文件分别保存在`/tmp/crawler_stdout.log`和`/tmp/api_stdout.log`中，自定义日志信息在`/tmp/crawler.log`中，可以通过命令查看：
+日志文件保存在`/tmp/crawler.log`为前缀的文件中，可以通过命令查看：
 
 ```bash
-cat /tmp/api_stdout.log
-cat /tmp/crawler_stdout.log
 cat /tmp/crawler.log
 ```
+
+另外，在最新的前端管理面板中，可直接下载运行日志。
 
 ## docker部署的相关问题
 
@@ -149,13 +149,13 @@ systemctl enable docker
 
 ### 如何查看运行日志？
 
-爬虫和api程序的运行日志文件分别保存在`/tmp/crawler_stdout.log`和`/tmp/api_stdout.log`中，自定义日志信息在`/tmp/crawler.log`中，可以通过命令查看：
+日志文件保存在`/tmp/crawler.log`为前缀的文件中，可以通过命令查看：
 
 ```bash
-cat /tmp/api_stdout.log
-cat /tmp/crawler_stdout.log
 cat /tmp/crawler.log
 ```
+
+另外，在最新的前端管理面板中，可直接下载运行日志。
 
 ### 如何取消运行？
 
