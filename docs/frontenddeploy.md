@@ -45,12 +45,12 @@ date: 2022-10-09 00:38:16
         expire_days: 1, 
     }
 </script>
-<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.10/dist/fcircle.min.js"></script>
+<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.0.11/dist/fcircle.min.js"></script>
 ```
 
 访问域名下的`/fcircle`即可看到效果。
 
-如果觉得该cdn比较慢，可以手动将这两个js文件放到你认为更快的cdn上。
+如果觉得该cdn比较慢，可以手动将js文件放到你认为更快的cdn上。
 
 新版前端在顶部右下角卡片新增管理面板：
 
@@ -58,7 +58,7 @@ date: 2022-10-09 00:38:16
 
 点击即可进入。第一次部署成功后，**输入第一个密码的同时设置密码。请设置一个安全可靠的密码，并防止泄露**。
 
-当保存设置时，由于网络原因，可能需要一段时间响应，尽量避免连续保存。
+> 对于github-vercel-sqlite部署，当保存设置时，会经历推送github、vercel重建的步骤，可能需要一段时间才能同步你的更改，因此在这种部署方式下，会有一定的延迟存在。
 
 除了在管理面板配置之外，朋友圈同样支持修改配置文件进行配置，详见[配置项说明](settings.md)。
 
