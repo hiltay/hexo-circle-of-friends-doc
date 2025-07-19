@@ -96,6 +96,6 @@ curl 127.0.0.1:8000/all
 
 默认采用的存储方式为sqlite，sqlite一个无需配置的轻量级数据库，在本项目的使用场景下完全可以满足绝大部分用户的需求。如果你需要使用mysql或mongodb，请查看[配置项说明](settings.md)。
 
-### 关于抓取
+### 如何适配我的博客友链页面？
 
-请查看[开发文档](developmentdoc.md)
+请查看[开发文档](developmentdoc.md?id=如何适配我的友链页面)
