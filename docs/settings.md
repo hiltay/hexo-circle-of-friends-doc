@@ -55,7 +55,7 @@
 
 ### 如果你是github部署
 
-所有的secret可以在`/.github/workflows/CI.yml`文件中查看。
+所有的secret可以在`.github/workflows/CI.yml`文件中查看。
 
 ```yaml
 env:

@@ -8,7 +8,9 @@
 
 部署方法：
 
-1、fork友链朋友圈的项目仓库，地址：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends，下文称此仓库为”你的仓库“。
+1、fork友链朋友圈的项目仓库，地址：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends 
+
+下文称此仓库为”你的仓库“。
 
 2、编辑项目根目录下的`fc_settings.yaml`文件，需要修改的配置如下：
 
@@ -68,6 +70,8 @@ LINK:
 LINK:
     - {link: "https://www.yyyzyyyz.cn/link/", theme: "butterfly"}  # link改为你的友链页地址，theme选择你的博客主题
 ```
+
+获取对应平台的二进制文件：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases
 
 运行部署脚本：
 
