@@ -10,7 +10,7 @@
 
 ## server版本更新
 
-重新获取二进制文件，放到对应的目录替换即可。
+拉取最新代码和文件：
 
 ```bash
 git pull origin main
@@ -22,6 +22,8 @@ git pull origin main
 > git clone https://github.com/Rock-Candy-Tea/hexo-circle-of-friends
 > ```
 
+重新获取二进制文件，放到对应的目录替换即可。
+
 如果更新遇到问题，请[及时反馈](contactus)。
 
 ## 前端更新
@@ -30,7 +32,7 @@ git pull origin main
 
 ## 导出配置文件和数据
 
-更新版本时，为了保留配置，需要手动将配置导出，（使用sqlite的，还需要将数据库文件导出）。
+更新版本时，为了保留配置，可以手动将配置导出，（使用sqlite的，还需要将数据库文件导出）。
 
 server部署：
 
