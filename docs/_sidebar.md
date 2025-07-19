@@ -6,11 +6,11 @@
 
 * [项目部署](deploy)
 
-  - [极简模式](simplemode)
-
   - [后端部署及基本配置](backenddeploy)
 
   - [前端部署](frontenddeploy)
+
+  - [极简模式](simplemode)
 
 * [配置项说明](settings.md)
 
