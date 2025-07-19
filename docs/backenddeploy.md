@@ -64,20 +64,30 @@ LINK:
 
 本项目支持用户自托管。
 
-编辑`/hexo_circle_of_friends/fc_settings.yaml`文件，需要修改的配置如下：
+clone项目：
+
+```bash
+git clone https://github.com/Rock-Candy-Tea/hexo-circle-of-friends.git
+```
+
+编辑`fc_settings.yaml`文件，需要修改的配置如下：
 
 ```python
 LINK:
     - {link: "https://www.yyyzyyyz.cn/link/", theme: "butterfly"}  # link改为你的友链页地址，theme选择你的博客主题
 ```
 
-获取对应平台的二进制文件：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases
-
-运行部署脚本：
+获取对应平台的二进制文件：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases  例如，对于大多数linux系统来说：
 
 ```bash
-chmod +x start.sh
-./start.sh
+wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.0/linux-x86_64-unknown-linux-musl.zip
+unzip linux-x86_64-unknown-linux-musl.zip 
+```
+
+然后运行部署脚本：
+
+```bash
+chmod +x start.sh && ./start.sh
 ```
 
 尝试访问API：
