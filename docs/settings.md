@@ -78,7 +78,7 @@ env:
 - **MYSQL_URI**：（可选）仅在`fc_settings.yaml`中设置`DATABASE=mysql`时，需要添加，默认为空
 - **MONGODB_URI**：（可选）仅在`fc_settings.yaml`中设置`DATABASE=mongodb`时，需要添加，默认为空
 
-### 自托管部署
+### 如果你是自托管部署
 
 可以使用export设置临时环境变量，也可以设置永久环境变量。
 
