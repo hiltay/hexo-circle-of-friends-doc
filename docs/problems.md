@@ -23,7 +23,7 @@
 
 点击仓库的`setting-->Actions-->General-->勾选Read and write permissions-->Save`
 
-![](workflow_permissions.png)
+![](actions权限修改.png)
 
 ## server部署的相关问题
 
@@ -35,19 +35,8 @@ yum install -y git
 
 ### 如何取消运行？
 
-如果需要关闭爬虫和api，需要找到其进程号
-
 ```bash
-ps aux
-```
-
-![QQ截图20220205222725](QQ截图20220205222725.png)
-
-杀掉对应的进程即可
-
-```bash
-kill -9 7584
-kill -9 7585
+chmod +x && ./stop.sh
 ```
 
 ### 如何查看运行日志？
