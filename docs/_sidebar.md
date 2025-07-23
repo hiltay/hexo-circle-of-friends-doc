@@ -20,6 +20,8 @@
 
 * [api接口说明](apidoc)
 
-* [开发文档](developmentdoc)
+* [开发文档](AdvancedGuide)
+  
+* [贡献代码](contributing)
 
 * [联系我们](contactus.md)

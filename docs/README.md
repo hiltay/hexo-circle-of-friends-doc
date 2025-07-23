@@ -34,6 +34,7 @@
 
 [联系我们](contactus.md)
 
+
 ## 贡献
 
-欢迎协助完善本文档：https://github.com/hiltay/hexo-circle-of-friends-doc
+[为项目做贡献](contributing)
