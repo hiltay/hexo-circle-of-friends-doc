@@ -6,26 +6,26 @@
 
 fork友链朋友圈的项目仓库，地址：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends
 
-编辑`/hexo_circle_of_friends/fc_settings.yaml`文件，需要修改的配置如下：
+编辑`fc_settings.yaml`文件，需要修改的配置如下：
 
 ```yaml
 LINK:
     - {link: "https://www.yyyzyyyz.cn/link/", theme: "butterfly"}  # link改为你的友链页地址，theme选择你的博客主题
 ```
 
-编辑`.github/workflows/main.yml`文件，将`SIMPLE_MODE`设置为`true`：
+编辑`.github/workflows/CI.yml`文件，将`SIMPLE_MODE`设置为`true`：
 
 ```yaml
 SIMPLE_MODE: true # 极简模式是否开启
 ```
 
-然后点击仓库的`setting-->Actions-->General-->勾选Read and write permissions-->Save`
+点击你的仓库`Settings-->Actions-->General`，找到`Workflow permissions`，选择`Read and write permissions`，如图：
 
-![](workflow_permissions.png)
+![actions权限修改.png](actions权限修改.png)
 
-启用`fork`后仓库的github action，点击`Actions-->I understand my workflows, go ahead and enable them`
+启用你的仓库的github action，点击`Actions-->I understand my workflows, go ahead and enable them`
 
-![QQ截图20220205081120](QQ截图20220205081120.png)
+![启用actions.png](启用actions.png)
 
 之后点击`update-friends-posts`并启用`workflow`
 
@@ -36,5 +36,3 @@ SIMPLE_MODE: true # 极简模式是否开启
 ![image-20221008232746973](image-20221008232746973.png)
 
 等待运行完毕后，仓库会上传`data.json`，文件内容与api：`/all`内容相同，供用户自行取用。
-
-在极简模式下，友链朋友圈的工作止步于此，这意味着开启了此模式后，用户不需要部署我们提供的前端，前端完全交由用户实现。
