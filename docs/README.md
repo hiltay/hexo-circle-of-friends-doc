@@ -1,17 +1,10 @@
-# 友链朋友圈
+<p align="center"><img src="./fcircle.png" alt="fcircle" /></p>
+
+<h1 align="center">友链朋友圈</h1>
 
 > 最后更新于：2025-07-23
 
 你是否经常烦恼于友链过多但没有时间浏览？那么友链朋友圈将解决这一痛点。你可以随时获取友链网站的更新内容，并了解友链的活跃情况。
-
-<div class="fc"><img src="./fcircle.png" alt="fcircle" /></div>
-<style>
-.fc{
-display: flex;
-align-items: center;
-justify-content: center;
-}
-</style>
 
 在经历将近一年多没有更新和维护之后，yyyz也是终于抽出时间维护和更新。经过这么长时间，我对本项目的理解有了变化：返璞归真，能简则简。删除了管理面板、冗余的api，仅保留用户所需的必要功能，同时极大地简化了部署流程，不再需要额外配置过多环境变量。同时，项目除Vercel部分仍使用fastapi外，其余代码全部采用Rust重写，相比于python实现来说，运行效率更高，也无需为了各种python版本和package依赖烦恼。
 
