@@ -2,7 +2,7 @@
 
 <!-- > 如果您不是第一次部署而是版本更新，旧版本有些配置可能已经不兼容，请以最新版本为准！版本更新方法见[版本更新](update) -->
 
-默认采用github action+vercel的方式实现无服务器托管，server和docker为自托管，需要自备服务器。
+默认采用github action+vercel的方式实现无服务器托管，server为自托管，需要自备服务器。
 
 ## github+vercel部署
 

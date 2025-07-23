@@ -201,6 +201,10 @@ post_page_rules:
 
 没错，当你编写好了这些规则，再次运行爬虫时，程序就会根据这些规则获取你想要的文章了~
 
+### 协助我们完善内置规则
+
+如果你愿意为其他博客主题适配规则，欢迎[提出PR](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/pulls)，并在PR中进行简要说明。
+
 <!-- ## 配置项json友链
 
 在`fc_settings.yaml`中的配置项友链`SETTINGS_FRIENDS_LINKS`主要针对还未适配主题或者有**定制需求**的用户，这里对`json_api`的用法作一个详细的说明。

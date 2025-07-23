@@ -49,7 +49,7 @@
 
 - **DATABASE**：数据的存储方式，目前支持`mysql`、`sqlite`、`mongodb`，默认为`sqlite`。
 
-- **DEPLOY_TYPE**：整个项目的部署方式，目前支持将项目部署在`github`、`server`、`docker`，默认为`github`。
+- **DEPLOY_TYPE**：整个项目的部署方式，目前支持将项目部署在`github`、`server`，默认为`github`。
 
 ## 环境变量配置
 
