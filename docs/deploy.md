@@ -4,7 +4,7 @@
 
 后端部署概览：
 
-后端部署支持自托管和github托管。默认采用自托管方式。[查看教程](backenddeploy.md?id=后端部署)
+后端部署支持自托管和github托管。默认采用github+vercel部署方式。[查看教程](backenddeploy.md?id=后端部署)
 
 
 
