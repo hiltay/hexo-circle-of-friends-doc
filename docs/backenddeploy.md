@@ -76,10 +76,10 @@ LINK:
     - {link: "https://www.yyyzyyyz.cn/link/", theme: "butterfly"}  # link改为你的友链页地址，theme选择你的博客主题
 ```
 
-获取对应平台的二进制文件：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases 例如，对于大多数 linux 系统来说：
+获取对应平台的**最新**二进制文件：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases 例如，对于大多数 linux 系统来说：
 
 ```bash
-wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.0/linux-x86_64-unknown-linux-musl.zip
+wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.1/linux-x86_64-unknown-linux-musl.zip
 unzip linux-x86_64-unknown-linux-musl.zip
 ```
 
