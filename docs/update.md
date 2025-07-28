@@ -2,11 +2,12 @@
 
 ## github 版本更新：
 
-4.2.0 以后的版本升级：发布新版本后，您只需要在您 fork 的仓库点击 fetch 即可更新到最新版本。（如果遇到冲突，尝试重新 fork，或者手动解决）
+您只需要在您 fork 的仓库点击 `Sync fork` 即可更新到最新版本。
 
-![img.png](img.png)
+- `Discard xx commits`：先清空你的仓库领先的提交（如`data.db`，`fc_settings.yaml`等文件），然后同步更新（`Update branch`有冲突时可以选择）
+- `Update branch`：不清空领先的提交，直接同步（建议优先尝试）
 
-4.2.0 以前的版本升级：建议重新 fork 仓库
+![sync_fork](sync_fork.png)
 
 ## server 版本更新
 
