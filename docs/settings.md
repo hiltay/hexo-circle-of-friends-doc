@@ -22,13 +22,13 @@
   [友链名,友链主页地址,友链头像,自定义订阅后缀]
   ```
 
-  - 关于**json_api**选项，4.3.0 以后支持通过提供 api 对友链进行配置，返回格式必须为 json，格式如下：
+  - 关于**json_api_or_path**选项，支持通过提供 json 格式的友链配置，可以是本地文件路径，或者是一个 url 地址（该 url api 的返回格式必须为 json），具体格式如下：
 
     ```json
     {"friends":[[友链1],[友链2],[友链3],[友链4]....]}
     ```
 
-    其中，友链 1、友链 2 中的内容格式同**list**字段。
+    其中，友链 1、友链 2 中的内容格式同**list**字段。[test_api.json](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/blob/main/tests/test_api.json)可以作为一个不错的参考。
 
 - **BLOCK_SITE**：屏蔽站点，配置在这里的网址不会被爬取。比如，你的友链页添加了自己，并且不想被爬虫获取，就可以把自己的主页地址屏蔽掉。**支持正则表达式**，举例：
   ```python
