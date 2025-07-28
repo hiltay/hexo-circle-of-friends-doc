@@ -23,7 +23,9 @@ git pull origin main
 > git clone https://github.com/Rock-Candy-Tea/hexo-circle-of-friends
 > ```
 
-重新获取二进制文件，放到对应的目录替换即可。
+然后重新获取对应平台**最新**的二进制文件：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases
+
+放到对应的目录替换即可。
 
 如果更新遇到问题，请[及时反馈](contactus)。
 
