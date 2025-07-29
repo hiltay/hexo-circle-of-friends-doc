@@ -36,6 +36,10 @@ chmod +x && ./stop.sh
 
 ## 其他问题
 
+### 项目名称里有 hexo，只支持 hexo 吗？其它博客框架/主题是否支持呢？
+
+当然支持！由于本项目一开始诞生于 hexo 博客圈，因此定名为`hexo-circle-of-friends`，但是**程序逻辑是通用的**，要适配其他类型的博客，请参考[进阶攻略](AdvancedGuide)。
+
 ### mysql 数据库字符集报错
 
 见[issues/25](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/issues/25)，如果所爬取的数据中含有 emoji 表情，请设置 mysql 字符集为`utf8mb4`，否则会报`Incorrect string value`错误。
