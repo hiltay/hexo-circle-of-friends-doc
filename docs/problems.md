@@ -8,13 +8,6 @@
 
 ![获取secret_key.png](获取secret_key.png)
 
-<!-- 添加4个环境变量secret：
-
-- `GH_NAME`：github名称，也就是你的用户名
-- `GH_EMAIL`：github邮箱，填写你注册github的邮箱
-- `GH_TOKEN`：github访问token，获取方式，请参考[官方文档](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)，其中，`Select scopes`选择`repo`和`workflow`。
-- `STORAGE_TYPE`：存储方式，填写`sqlite` -->
-
 ### sqlite 或者 data.json 无法上传至仓库的问题
 
 见[issues/87](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/issues/87)，github 仓库更新了默认的权限，fork 后的仓库似乎只保留`read`权限，导致仓库无法上传文件。
@@ -29,9 +22,7 @@
 
 ### 如何安装 git？
 
-```bash
-yum install -y git
-```
+https://git-scm.com/downloads
 
 ### 如何取消运行？
 

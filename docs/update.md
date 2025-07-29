@@ -2,7 +2,7 @@
 
 ## github 版本更新：
 
-您只需要在您 fork 的仓库点击 `Sync fork` 即可更新到最新版本。
+您只需要在你的仓库仓库点击 `Sync fork` 即可更新到最新版本。
 
 - `Discard xx commits`：先清空你的仓库领先的提交（如`data.db`，`fc_settings.yaml`等文件），然后同步更新（`Update branch`有冲突时可以选择）
 - `Update branch`：不清空领先的提交，直接同步（建议优先尝试）
