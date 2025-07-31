@@ -11,6 +11,12 @@
 
 ## server 版本更新
 
+停止api服务：
+
+```bash
+chmod +x stop.sh && ./stop.sh
+```
+
 拉取最新代码和文件：
 
 ```bash
@@ -25,7 +31,11 @@ git pull origin main
 
 然后重新获取对应平台**最新**的二进制文件：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases
 
-放到对应的目录替换即可。
+放到对应的目录替换。重新启动：
+
+```bash
+chmod +x start.sh && ./start.sh
+```
 
 如果更新遇到问题，请[及时反馈](contactus)。
 
