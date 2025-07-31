@@ -79,7 +79,7 @@ LINK:
 获取对应平台的**最新**二进制文件：https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases 例如，对于大多数 linux 系统来说：
 
 ```bash
-wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.2/linux-x86_64-unknown-linux-musl.zip
+wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.3/linux-x86_64-unknown-linux-musl.zip
 unzip linux-x86_64-unknown-linux-musl.zip
 ```
 
