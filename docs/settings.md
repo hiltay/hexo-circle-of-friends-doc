@@ -57,9 +57,9 @@
   - **max_concurrent**：最大并发数，默认 `3` (平衡速度与稳定性)
   - **wait_on_rate_limit**： 遇限速是否等待，默认 `true` (提高成功率)
   - **max_chars**：单次调用最大字符数，默认 `8000` (适合大部分模型)
-  - **gemini**：Google gemini
+  - **gemini**：[Google gemini](https://aistudio.google.com/app/prompts/new_chat)
     - **models**: 使用模型名称。程序会依次尝试使用。
-  - **siliconflow**：siliconflow
+  - **siliconflow**：[siliconflow](https://siliconflow.cn/)
     - **models**: 使用模型名称。程序会依次尝试使用。
 
 #### 温馨提示
