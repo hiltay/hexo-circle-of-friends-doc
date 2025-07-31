@@ -35,7 +35,7 @@ date: 2022-10-09 00:38:16
         expire_days: 1, 
     }
 </script>
-<script type="text/javascript" src="https://npm.elemecdn.com/fcircle-theme-yyyz@1.1.0/dist/fcircle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fcircle-theme-yyyz@1.1.1/dist/fcircle.min.js"></script>
 ```
 
 访问域名下的`/fcircle`即可看到效果。
