@@ -51,6 +51,17 @@
 
 - **DEPLOY_TYPE**：整个项目的部署方式，目前支持将项目部署在`github`、`server`，默认为`github`。
 
+- **GENERATE_SUMMARY**：AI 摘要功能
+  - **enabled**：是否开启此功能，开启此功能会为每篇文章生成 AI 摘要。要使用此功能，需要配置对应 AI 供应商的 API_KEY 环境变量，请参考：[](#项目技术栈与架构)。默认否。
+  - **provider**：供应商，目前可选：gemini|siliconflow|all （默认使用 "all"，即全部选择）
+  - **max_concurrent**：最大并发数，默认 3 (平衡速度与稳定性)
+  - **wait_on_rate_limit**： 遇限速是否等待，默认 true (提高成功率)
+  - **max_chars**：单次调用最大字符数，默认 8000 (适合大部分模型)
+  - **gemini**：Google gemini
+    - **models**: 使用模型名称。程序会依次尝试使用。
+  - **siliconflow**：siliconflow
+    - **models**: 使用模型名称。程序会依次尝试使用。
+
 ## 环境变量配置
 
 ### 如果你是 github 部署
@@ -67,6 +78,8 @@ env:
   MYSQL_URI: ${{ secrets.MYSQL_URI }} # MySQL URI
   # mongodb配置
   MONGODB_URI: ${{ secrets.MONGODB_URI }} # mongodb URI 支持'mongodb://'和'mongodb+srv://'
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
   TZ: Asia/Shanghai
 ```
 
@@ -77,6 +90,8 @@ env:
 - **PROXY**：（可选）配置 http 代理，默认为空
 - **MYSQL_URI**：（可选）仅在`fc_settings.yaml`中设置`DATABASE=mysql`时，需要添加，默认为空
 - **MONGODB_URI**：（可选）仅在`fc_settings.yaml`中设置`DATABASE=mongodb`时，需要添加，默认为空
+- **GEMINI_API_KEY**：（可选）AI 摘要功能开启后，可以选择配置。[获取 GEMINI_API_KEY](https://ai.google.dev/gemini-api/docs/api-key?hl=zh-cn)，默认为空
+- **SILICONFLOW_API_KEY**：（可选）AI 摘要功能开启后，可以选择配置。[获取 SILICONFLOW_API_KEY](https://cloud.siliconflow.cn/me/account/ak)，默认为空
 
 ### 如果你是自托管部署
 
@@ -88,6 +103,8 @@ env:
 MYSQL_URI=mysql://root:123456@127.0.0.1:3306/pyq
 PROXY=127.0.0.1:7890
 MONGODB_URI=mongodb://root:123456@127.0.0.1:27017
+GEMINI_API_KEY=xxxxx
+SILICONFLOW_API_KEY=xxxxx
 ```
 
 `.env`文件优先级最高，会覆盖环境变量中已有的配置。
