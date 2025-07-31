@@ -52,7 +52,7 @@
 - **DEPLOY_TYPE**：整个项目的部署方式，目前支持将项目部署在`github`、`server`，默认为`github`。
 
 - **GENERATE_SUMMARY**：AI 摘要功能
-  - **enabled**：是否开启此功能，开启此功能会为每篇文章生成 AI 摘要。要使用此功能，需要配置对应 AI 供应商的 API_KEY 环境变量，请参考：[](#项目技术栈与架构)。默认否。
+  - **enabled**：是否开启此功能，开启此功能会为每篇文章生成 AI 摘要。要使用此功能，需要配置对应 AI 供应商的 API_KEY 环境变量，请参考：[环境变量配置](#环境变量配置)。默认否。
   - **provider**：供应商，目前可选：gemini|siliconflow|all （默认使用 "all"，即全部选择）
   - **max_concurrent**：最大并发数，默认 3 (平衡速度与稳定性)
   - **wait_on_rate_limit**： 遇限速是否等待，默认 true (提高成功率)
