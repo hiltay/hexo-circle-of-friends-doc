@@ -2,7 +2,7 @@
 
 ## github 版本更新：
 
-您只需要在你的仓库仓库点击 `Sync fork` 即可更新到最新版本。
+只需要在你的仓库仓库点击 `Sync fork` 即可更新到最新版本。
 
 - `Discard xx commits`：先清空你的仓库领先的提交（如`data.db`，`fc_settings.yaml`等文件），然后同步更新（**`Update branch`有冲突时可以选择**）
 - `Update branch`：不清空领先的提交，直接同步（**建议优先尝试**）
@@ -11,7 +11,7 @@
 
 ## server 版本更新
 
-停止api服务：
+停止 api 服务：
 
 ```bash
 chmod +x stop.sh && ./stop.sh
@@ -55,4 +55,4 @@ chmod +x start.sh && ./start.sh
 
 ## 注意事项
 
-如果觉得本项目不错，欢迎为我们点⭐Star支持一下。
+如果觉得本项目不错，欢迎为我们点 ⭐Star 支持一下。
