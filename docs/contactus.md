@@ -14,4 +14,5 @@
 | yyyz     | https://www.yyyzyyyz.cn/   | 4.x 方案编写者，5.x 前后端编写者，多主题友链抓取适配，服务器部署方案编写者，友链朋友圈现维护者           |
 | 林木木   | https://immmmm.com/        | 资深前端，提供 4.x 友链朋友圈前端方案                                                                    |
 | Fox      | https://foolishfox.cn/     | 提供 sql api 与 sql 存储本地化适配方案                                                                   |
-| 安知鱼   | https://anzhiy.cn/         | 解决一系列前端适配问题，提供鱼塘朋友圈部署前端方案                                                       |
+| 安知鱼   | https://blog.anheyu.com/    | 解决一系列前端适配问题，提供鱼塘朋友圈部署前端方案                                                       |
+| LiuShen  | https://www.liushen.fun/   | 提供 6.x 版本前端适配与主题整合方案，维护新版前端部署文档                                                  |
