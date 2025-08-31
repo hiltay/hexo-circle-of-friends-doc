@@ -1,16 +1,22 @@
 # 前端部署
 
-## 方案：yyyz
+> 目前仅适配 **hexo-theme-butterfly**及部分类似主题，是否兼容请自行尝试，其他主题的支持正在开发中，敬请期待。
 
-部署方法：
+## 1. 新建页面
 
-新建一个页面，比如 hexo 在博客根目录使用命令
+首先在博客根目录运行命令，新建一个 `fcircle` 页面：
 
 ```bash
 hexo new page fcircle
 ```
 
-可以看到`source/fcircle/index.md` 文件，打开该文件，粘贴以下内容（注意修改 api 地址）：
+执行后会在 `source/fcircle/index.md` 下生成文件，当然你也可以直接手动创建该文件。
+
+---
+
+## 2. 编辑页面内容
+
+打开 `source/fcircle/index.md` 文件，清空默认内容，粘贴以下代码（注意修改 **API 地址**）：
 
 ```markdown
 ---
@@ -18,79 +24,78 @@ title: 朋友圈
 date: 2022-10-09 00:38:16
 ---
 
-<div id="hexo-circle-of-friends-root"></div>
+<div id="friend-circle-container">与主机通讯中……</div>
+
 <script>
-    let UserConfig = {
-        // 填写你的api地址
-        private_api_url: 'http://127.0.0.1:8000/',
-        // 初始加载几篇文章
-        page_init_number: 20,
-        // 点击加载更多时，一次最多加载几篇文章，默认10
-        page_turning_number: 10,
-        // 头像加载失败时，默认头像地址
-        error_img: 'https://sdn.geekzu.org/avatar/57d8260dfb55501c37dde588e7c3852c',
-        // 进入页面时第一次的排序规则
-        sort_rule: 'created',
-        // 本地文章缓存数据过期时间（天）
-        expire_days: 1, 
+    if (typeof UserConfig === 'undefined') {
+        var UserConfig = {
+            // 你的 hexo-circle-of-friends 后端地址（需部署后端 API）
+            private_api_url: 'https://fc.liushen.fun/',
+            // 每次点击“加载更多”时加载的文章数量，默认 24
+            page_turning_number: 24,
+            // 头像加载失败时的默认图片
+            error_img: 'https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/logo.png',
+        }
     }
 </script>
-<script type="text/javascript" src="https://cdn.cbd.int/fcircle-theme-yyyz@1.1.1/dist/fcircle.min.js"></script>
+
+<!-- 样式文件：以主题命名，目前默认支持 butterfly -->
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/default.min.css">
+
+<!-- 脚本文件：对应主题样式功能 -->
+<script src="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/default.min.js"></script>
 ```
 
-访问域名下的`/fcircle`即可看到效果。
-
-如果觉得该 cdn 比较慢，可以手动将 js 文件放到你认为更快的 cdn 上。
-
-## 方案：林木木
-
-[@林木木](https://immmmm.com/)的方案，已经完成与主仓库 4.x 版本 api 的适配。
-
-简单介绍部署方法，更多细节请[查看原文](https://immmmm.com/hi-friends-circle/)。
-
-新建一个页面，比如 hexo 在博客根目录使用命令
-
-```bash
-hexo new page fcircle
-```
-
-可以看到`source/fcircle/index.md` 文件，打开该文件，粘贴以下内容（注意修改 api 地址）：
-
-```markdown
----
-title: 朋友圈
-date: 2022-01-29 15:23:17
 ---
 
-<!-- 挂载友链朋友圈的容器 -->
-<div class="post-content">
-<div id="cf-container">与主机通讯中……</div>
-</div>
-<!-- 加样式和功能代码 -->
-<!-- 将apiurl改成你后端生成的api地址 -->
-<script type="text/javascript">
-  var fdataUser = {
-    apiurl: 'https://hexo-circle-of-friends-circle.vercel.app/'
-  }
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js"></script>
+## 3. 样式选择
+
+目前 **仅支持 Hexo Butterfly 主题**，并且提供了多种样式。
+
+上面示例使用的是 **default** 样式，如果你想更换为其他样式，只需要修改 CSS 与 JS 文件路径即可，例如：
+
+* 默认样式（default）
+
+  ```html
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/default.min.css">
+  <script src="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/default.min.js"></script>
+  ```
+
+* IMm 风格样式（imm）
+
+  ```html
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/imm.min.css">
+  <script src="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/imm.min.js"></script>
+  ```
+
+更多样式请参考前端仓库文件夹：
+
+👉 [Friend-Circle-Frontend 仓库](https://github.com/Rock-Candy-Tea/Friend-Circle-Frontend)
+
+---
+
+## 4. 预览效果
+
+你可以在演示站点先行查看不同样式的效果：
+
+👉 [演示页面(暂未开放)](https://fc-preview.lius.xx.kg/)
+
+⚠️ 注意：演示页面与实际部署后的效果可能略有差异，仅供参考。
+
+---
+
+## 5. 完成部署
+
+执行 `hexo clean && hexo g && hexo s` 重新生成博客，访问你的博客地址：
+
+```
+https://你的域名/fcircle
 ```
 
-访问域名下的`/fcircle`即可看到效果。
+即可看到朋友圈效果。
 
-如果觉得 jsdelivr 比较慢，可以手动将 js、css 文件放到你认为更快的 cdn 上。
+---
 
-## 方案：Akilar-SAO
+✅ 至此，前端部署完成。
 
-店长[@Akilar](https://akilar.top/posts/62f13a97/)的方案，旧版 3.x 方案，暂未适配新 api。
-
-参考：https://akilar.top/posts/62f13a97/
-
-## 方案：Heo
-
-点击查看[@Heo 提供的部署方案](https://blog.zhheo.com/p/4e18a507.html)
-
-## 方案：安知鱼
-
-点击查看[@安知鱼提供的部署方案](https://anzhiy.cn/posts/3753.html)
+后续如果要更换样式，只需替换对应的 CSS/JS 文件地址即可，无需修改其他配置。
