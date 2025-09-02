@@ -51,7 +51,8 @@ export default defineConfig({
               },
               { text: '配置项说明', link: '/docs/configuration' },
               { text: '常见问题', link: '/docs/problems' },
-              { text: '如何更新', link: '/docs/upgrade' },
+              { text: '版本更新', link: '/docs/upgrade' },
+              { text: '进阶攻略', link: '/docs/advanced' },
             ]
           },
           {
