@@ -1,0 +1,1 @@
+import{_ as r,c as e,o as a,af as d}from"./chunks/framework.DSZV70p2.js";const i=JSON.parse('{"title":"联系我们","description":"","frontmatter":{},"headers":[],"relativePath":"contactus.md","filePath":"contactus.md"}'),o={name:"contactus.md"};function n(h,t,s,l,p,c){return a(),e("div",null,[...t[0]||(t[0]=[d("",4)])])}const _=r(o,[["render",n]]);export{i as __pageData,_ as default};
