@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/logo.png" alt="Hexo Circle Of Friends Logo" width="120" />
+  <img src="./fcircle-docs/public/logo.png" alt="Hexo Circle Of Friends Logo" width="120" />
 </p>
 
 <h1 align="center">Hexo-Circle-Of-Friends Docs</h1>
