@@ -6,6 +6,7 @@ export default defineConfig({
   // description: "一款聚合友链更新的工具，支持文章摘要 AI 生成功能，助你轻松追踪友链动态。",
   
   // 忽略死链接检查
+  srcDir: './fcircle-docs',
   ignoreDeadLinks: true,
 
   sitemap: {
