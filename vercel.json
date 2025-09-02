@@ -1,0 +1,19 @@
+{
+  "buildCommand": "pnpm i --save && pnpm docs:build",
+  "outputDirectory": ".vitepress/dist",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "redirects": [
+    {
+      "source": "/(.*)/index.html",
+      "destination": "/$1/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
