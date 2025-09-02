@@ -8,9 +8,9 @@
 
 ---
 
-## 📝 提交你的站点
+## 📝 更多预览
 
-如果你已经成功部署了 fcircle，可以将页面地址提交到此处，让更多人看到你的效果展示。  
-欢迎通过 [贡献指南](../contributing.md) 添加你的链接。
+[点击此处查看](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/discussions/165)
 
+如果你已经成功部署了fcircle，可以将页面地址提交到这里，让更多人看到你的效果展示。  
 ---
