@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   // title: "友链朋友圈",
   // description: "一款聚合友链更新的工具，支持文章摘要 AI 生成功能，助你轻松追踪友链动态。",
-  
+  lastUpdated: true,
   // 忽略死链接检查
   srcDir: './fcircle-docs',
   ignoreDeadLinks: true,
@@ -17,7 +17,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Rock-Candy-Tea/hexo-circle-of-friends' },
-    ]
+    ],
+    search: {
+      provider: 'local'
+    }
   },
 
   locales: {
@@ -75,58 +78,58 @@ export default defineConfig({
       }
     },
 
-    en: {
-      lang: 'en-US',
-      label: 'English',
-      title: 'Hexo Circle of Friends',
-      description: 'A tool that aggregates friend updates, supports AI-generated article summaries, and helps you easily track friend dynamics.',
-      themeConfig: {
-        nav: [
-          { text: 'Home', link: '/en/' },
-          { text: 'Preview', link: '/en/docs/preview' }
-        ],
-        sidebar: [
-          {
-            text: 'Deployment',
-            link: '/en/docs/',
-            items: [
-              { text: 'Preview', link: '/en/docs/preview' },
-              {
-                text: 'Deployment',
-                link: '/en/docs/deployment/',
-                items: [
-                  { text: 'Backend', link: '/en/docs/deployment/backend' },
-                  { text: 'Frontend', link: '/en/docs/deployment/frontend' },
-                  { text: 'Simple Mode', link: '/en/docs/deployment/simplemode' }
-                ]
-              },
-              { text: 'Configuration', link: '/en/docs/configuration' },
-              { text: 'FAQ', link: '/en/docs/problems' },
-              { text: 'Update', link: '/en/docs/upgrade' },
-            ]
-          },
-          {
-            text: 'API Documentation',
-            link: '/en/api/',
-            items: [
-              { text: 'All Info', link: '/en/api/all' },
-              { text: 'All Friends', link: '/en/api/friend' },
-              { text: 'Random Friend', link: '/en/api/randomfriend' },
-              { text: 'Random Post', link: '/en/api/randompost' },
-              { text: 'Version', link: '/en/api/version' },
-              { text: 'Specific Post', link: '/en/api/post' },
-              { text: 'Post Summary', link: '/en/api/summary' },
-            ]
-          },
-          { 
-            text: 'Others',
-            items: [
-              { text: 'Contributing', link: '/en/contributing' },
-              { text: 'Contact Us', link: '/en/contactus' },
-            ]
-          },
-        ]
-      }
-    }
+    // en: {
+    //   lang: 'en-US',
+    //   label: 'English',
+    //   title: 'Hexo Circle of Friends',
+    //   description: 'A tool that aggregates friend updates, supports AI-generated article summaries, and helps you easily track friend dynamics.',
+    //   themeConfig: {
+    //     nav: [
+    //       { text: 'Home', link: '/en/' },
+    //       { text: 'Preview', link: '/en/docs/preview' }
+    //     ],
+    //     sidebar: [
+    //       {
+    //         text: 'Deployment',
+    //         link: '/en/docs/',
+    //         items: [
+    //           { text: 'Preview', link: '/en/docs/preview' },
+    //           {
+    //             text: 'Deployment',
+    //             link: '/en/docs/deployment/',
+    //             items: [
+    //               { text: 'Backend', link: '/en/docs/deployment/backend' },
+    //               { text: 'Frontend', link: '/en/docs/deployment/frontend' },
+    //               { text: 'Simple Mode', link: '/en/docs/deployment/simplemode' }
+    //             ]
+    //           },
+    //           { text: 'Configuration', link: '/en/docs/configuration' },
+    //           { text: 'FAQ', link: '/en/docs/problems' },
+    //           { text: 'Update', link: '/en/docs/upgrade' },
+    //         ]
+    //       },
+    //       {
+    //         text: 'API Documentation',
+    //         link: '/en/api/',
+    //         items: [
+    //           { text: 'All Info', link: '/en/api/all' },
+    //           { text: 'All Friends', link: '/en/api/friend' },
+    //           { text: 'Random Friend', link: '/en/api/randomfriend' },
+    //           { text: 'Random Post', link: '/en/api/randompost' },
+    //           { text: 'Version', link: '/en/api/version' },
+    //           { text: 'Specific Post', link: '/en/api/post' },
+    //           { text: 'Post Summary', link: '/en/api/summary' },
+    //         ]
+    //       },
+    //       { 
+    //         text: 'Others',
+    //         items: [
+    //           { text: 'Contributing', link: '/en/contributing' },
+    //           { text: 'Contact Us', link: '/en/contactus' },
+    //         ]
+    //       },
+    //     ]
+    //   }
+    // }
   }
 })

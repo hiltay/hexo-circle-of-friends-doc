@@ -106,7 +106,7 @@
    前往 [Releases](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases) 下载对应平台的二进制文件，例如 Linux：
 
    ```bash
-   wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.3/linux-x86_64-unknown-linux-musl.zip
+   wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.4/linux-x86_64-unknown-linux-musl.zip
    unzip linux-x86_64-unknown-linux-musl.zip
    ```
 
@@ -141,8 +141,6 @@
 ## 📖 更多
 
 * 如何适配博客友链页面？ → 查看 [进阶攻略](/docs/advanced)
-* 如何更新版本？ → 查看 [版本更新](/docs/changelog)
+* 如何更新版本？ → 查看 [版本更新](/docs/upgrade)
 
 ---
-
-*Last Updated: 2025-08-31*

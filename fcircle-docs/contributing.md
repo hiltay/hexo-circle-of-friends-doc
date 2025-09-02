@@ -50,47 +50,45 @@
 
 ### 步骤
 
-1. **Fork 并克隆仓库:**
-   Fork [Rock-Candy-Tea/hexo-circle-of-friends](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends) 仓库，并将你的 fork 克隆到本地：
+1.  **Fork 并克隆仓库:**
+    Fork [Rock-Candy-Tea/hexo-circle-of-friends](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends) 仓库，并将你的 fork 克隆到本地：
 
-   ```bash
-   git clone https://github.com/<YOUR_USERNAME>/hexo-circle-of-friends.git
-   cd hexo-circle-of-friends
-   ```
+    ```bash
+    git clone https://github.com/<YOUR_USERNAME>/hexo-circle-of-friends.git
+    cd hexo-circle-of-friends
+    ```
 
-2. **配置项目:**
-   从模板创建你自己的设置文件：
+2.  **配置项目:**
+    从模板创建你自己的设置文件：
 
-   ```bash
-   cp fc_settings.yaml my_settings.yaml
-   ```
+    ```bash
+    cp fc_settings.yaml my_settings.yaml
+    ```
 
-   对于本地开发，建议使用 `sqlite` 数据库，它不需要额外设置。请确保在你的 `my_settings.yaml` 中设置了 `DATABASE: "sqlite"`。
+    对于本地开发，建议使用 `sqlite` 数据库，它不需要额外设置。请确保在你的 `my_settings.yaml` 中设置了 `DATABASE: "sqlite"`。
 
-3. **构建 Rust 项目:**
-   构建整个工作区，以确保所有依赖项都已获取并且代码可以编译。
+3.  **构建 Rust 项目:**
+    构建整个工作区，以确保所有依赖项都已获取并且代码可以编译。
 
-   ```bash
-   cargo build
-   ```
+    ```bash
+    cargo build
+    ```
 
-4. **运行核心应用:**
-   要执行抓取并填充数据库，请运行 `fcircle_core` 二进制文件。它将默认使用 `fc_settings.yaml`。
+4.  **运行核心应用:**
+    要执行抓取并填充数据库，请运行 `fcircle_core` 二进制文件。它将默认使用 `fc_settings.yaml`。
 
-   ```bash
-   cargo run --bin fcircle_core
-   ```
+    ```bash
+    cargo run --bin fcircle_core
+    ```
 
-   这将在根目录中创建一个 `data.db` SQLite 文件。
+    这将在根目录中创建一个 `data.db` SQLite 文件。
 
-5. **运行 API 服务器:**
-   要提供数据服务，请运行 `fcircle_api` 二进制文件。
-
-   ```bash
-   cargo run --bin fcircle_api
-   ```
-
-   API 将在 `http://localhost:8000` 上可用。
+5.  **运行 API 服务器:**
+    要提供数据服务，请运行 `fcircle_api` 二进制文件。
+    ```bash
+    cargo run --bin fcircle_api
+    ```
+    API 将在 `http://localhost:8000` 上可用。
 
 ## 运行测试与检查
 
@@ -112,29 +110,27 @@
 
 - **运行 Linter (Clippy):**
   使用 `clippy` 来捕捉常见错误并提高代码质量。
-
   ```bash
   cargo clippy --workspace --all-targets --all-features -- -D warnings
   ```
 
 ## 分支管理与拉取请求
 
-1. **创建分支:** 基于 `main` 分支为你的功能或错误修复创建一个新分支。
+1.  **创建分支:** 基于 `main` 分支为你的功能或错误修复创建一个新分支。
 
-   ```bash
-   git checkout -b your-feature-name main
-   ```
+    ```bash
+    git checkout -b your-feature-name main
+    ```
 
-2. **进行更改:** 使用清晰简洁但概括全面的消息提交你的更改。
+2.  **进行更改:** 使用清晰简洁但概括全面的消息提交你的更改。
 
-3. **推送并创建拉取请求:** 将你的分支推送到你的 fork，并针对主仓库的 `main` 分支创建一个拉取请求（PR）。
+3.  **推送并创建拉取请求:** 将你的分支推送到你的 fork，并针对主仓库的 `main` 分支创建一个拉取请求（PR）。
 
-4. **PR 清单:**
-
-   - 为你的 PR 提供一个清晰的标题和描述。
-   - 确保所有测试、格式化检查和 linter 检查都通过。
-   - 如果你添加了新功能，请同时添加相应的测试。
-   - 如果你的更改影响了配置或需要新的设置步骤，请相应地更新文档。
+4.  **PR 清单:**
+    - 为你的 PR 提供一个清晰的标题和描述。
+    - 确保所有测试、格式化检查和 linter 检查都通过。
+    - 如果你添加了新功能，请同时添加相应的测试。
+    - 如果你的更改影响了配置或需要新的设置步骤，请相应地更新文档。
 
 ## 为文档做贡献
 
