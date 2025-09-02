@@ -138,21 +138,23 @@ Before submitting any changes, make sure all tests and code-quality checks pass.
 
 ## Contributing to Documentation
 
-Documentation lives in the [hexo-circle-of-friends-doc](https://github.com/hiltay/hexo-circle-of-friends-doc) repository and is built with [Docsify](https://docsify.js.org/).
+Documentation lives in the [hexo-circle-of-friends-doc](https://github.com/hiltay/hexo-circle-of-friends-doc) repository and is built with [vitepress](https://vitepress.dev/).
 
 Steps to contribute to the docs:
 
 1. Clone the `hexo-circle-of-friends-doc` repository.
 
-2. Make changes to the Markdown files in the `docs/` directory.
+2. Make changes to the Markdown files in the `fcircle-docs/` directory.
 
-3. To preview your changes locally, use the Docsify CLI:
+3. To preview your changes locally, use the PNPM:
 
    ```bash
-   # Install docsify-cli if you haven't
-   npm i docsify-cli -g
+   # Install pnpm-cli if you haven't
+   npm i -g pnpm
    # Serve the docs
-   docsify serve docs
+   pnpm docs:dev
    ```
+  
+4. Commit your changes and push them to your fork.
 
-4. Submit a pull request with your changes.
+5. Submit a pull request with your changes.

@@ -138,21 +138,23 @@
 
 ## 为文档做贡献
 
-文档位于 [hexo-circle-of-friends-doc](https://github.com/hiltay/hexo-circle-of-friends-doc) 仓库中，并使用 [Docsify](https://docsify.js.org/) 构建。
+文档位于 [hexo-circle-of-friends-doc](https://github.com/hiltay/hexo-circle-of-friends-doc) 仓库中，并使用 [vitepress](https://vitepress.dev/) 构建。
 
 为文档做贡献的步骤：
 
 1. 克隆 `hexo-circle-of-friends-doc` 仓库。
 
-2. 在 `docs/` 目录中对 Markdown 文件进行更改。
+2. 在 `fcircle-docs/` 目录中对 Markdown 文件进行更改。
 
-3. 要本地预览你的更改，可以使用 Docsify CLI：
+3. 要本地预览你的更改，可以使用 PNPM：
 
    ```bash
-   # 如果你还没有安装 docsify-cli
-   npm i docsify-cli -g
+   # 如果你还没有安装 PNPM
+   npm i -g pnpm
    # 启动文档服务
-   docsify serve docs
+   pnpm docs:dev
    ```
+  
+4. 注意，改文档使用了多语言，所以在修改文档时注意修改英文版本文档。
 
-4. 提交一个包含你更改的拉取请求。
+5. 提交一个包含你更改的拉取请求。
