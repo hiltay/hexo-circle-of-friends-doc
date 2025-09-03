@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import lightbox from "vitepress-plugin-lightbox"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -12,7 +13,12 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://fcircle-doc.yyyzyyyz.cn/'
   },
-  
+  markdown: {
+    config: (md) => {
+      // Use lightbox plugin
+      md.use(lightbox, {});
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     socialLinks: [
