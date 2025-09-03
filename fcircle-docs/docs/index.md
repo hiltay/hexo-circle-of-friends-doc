@@ -18,18 +18,14 @@
 以下文档可帮助你快速部署与使用：
 
 - [效果预览](/docs/preview) —— 展示聚合后的友链动态页面效果  
-- [项目部署](/docs/deployment/) —— 总计部署步骤
+- [项目部署](/docs/deployment/) —— 项目部署的完整参考
   - [后端部署](/docs/deployment/backend) —— 部署项目后端
   - [前端部署](/docs/deployment/frontend) —— 在前端部署项目以显示在任意页面
 - [配置项说明](/docs/configuration/) —— 项目配置的完整参考  
-  - [基础配置](/docs/configuration/basic) —— 必须的最小化配置项  
-  - [进阶配置](/docs/configuration/advanced) —— 更灵活的可选项与自定义功能  
-- [常见问题](/docs/faq) —— 常见问题与解决方法  
-- [版本更新](/docs/changelog) —— 历史版本更新日志  
-- [API 接口说明](/docs/api/) —— API 使用说明与参考  
-  - [文章接口](/docs/api/articles) —— 获取文章数据的 API  
-  - [友链接口](/docs/api/friends) —— 获取友链数据的 API  
-- [开发文档](/docs/development/) —— 面向开发者的扩展与二次开发指南  
+- [常见问题](/docs/problems) —— 常见问题与解决方法  
+- [版本更新](/docs/upgrade) —— 历史版本更新日志  
+- [API 接口说明](/api/) —— API 使用说明与参考  
+- [进阶攻略](/docs/advanced/) —— 进阶扩展与主题适配
 
 ---
 
