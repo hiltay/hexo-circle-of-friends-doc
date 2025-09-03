@@ -11,7 +11,7 @@
 | heo      | https://blog.zhheo.com/    | 友链朋友圈前端方案、视觉设计，UI 方案多样化，管理面板 logo 设计，鱼塘创始人 |
 | 贰猹     | https://noionion.top/      | 历代友链朋友圈后端维护者，3.0 方案编写者，多主题友链抓取适配，朋友圈售后中流砥柱，公共库方案、api 编写者 |
 | RaXianch | https://blog.raxianch.moe/ | 友链朋友圈后端维护，多主题友链抓取适配                       |
-| yyyz     | https://www.yyyzyyyz.cn/   | 4.x 方案编写者，5.x 前后端编写者，多主题友链抓取适配，服务器部署方案编写者，友链朋友圈现维护者 |
+| yyyz     | https://www.yyyzyyyz.cn/   | 4.x、5.x、6.x 前后端编写者，友链朋友圈现维护者 |
 | 林木木   | https://immmmm.com/        | 资深前端，提供 4.x 友链朋友圈前端方案                        |
 | Fox      | https://foolishfox.cn/     | 提供 sql api 与 sql 存储本地化适配方案                       |
 | 安知鱼   | https://blog.anheyu.com/   | 解决一系列前端适配问题，提供鱼塘朋友圈部署前端方案           |
