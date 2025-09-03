@@ -86,7 +86,7 @@ env:
   MONGODB_URI: ${{ secrets.MONGODB_URI }} # mongodb URI 支持'mongodb://'和'mongodb+srv://'
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
   SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
-  BGIMODEL_API_KEY: ${{ secrets.BGIMODEL_API_KEY }}
+  BIGMODEL_API_KEY: ${{ secrets.BIGMODEL_API_KEY }}
   TZ: Asia/Shanghai
 ```
 
@@ -99,7 +99,7 @@ env:
 - **MONGODB_URI**：（可选）仅在`fc_settings.yaml`中设置`DATABASE=mongodb`时，需要添加，默认为空
 - **GEMINI_API_KEY**：（可选）AI 摘要功能开启后，可以选择配置。[获取 GEMINI_API_KEY](https://ai.google.dev/gemini-api/docs/api-key?hl=zh-cn)，默认为空
 - **SILICONFLOW_API_KEY**：（可选）AI 摘要功能开启后，可以选择配置。[获取 SILICONFLOW_API_KEY](https://cloud.siliconflow.cn/me/account/ak)，默认为空
-- **BGIMODEL_API_KEY**：（可选）AI 摘要功能开启后，可以选择配置。[获取 BGIMODEL_API_KEY](https://bigmodel.cn/usercenter/proj-mgmt/apikeys)，默认为空
+- **BIGMODEL_API_KEY**：（可选）AI 摘要功能开启后，可以选择配置。[获取 BIGMODEL_API_KEY](https://bigmodel.cn/usercenter/proj-mgmt/apikeys)，默认为空
 
 ### 如果你是自托管部署
 
@@ -113,7 +113,7 @@ PROXY=127.0.0.1:7890
 MONGODB_URI=mongodb://root:123456@127.0.0.1:27017
 GEMINI_API_KEY=xxxxx
 SILICONFLOW_API_KEY=xxxxx
-BGIMODEL_API_KEY=xxxxx
+BIGMODEL_API_KEY=xxxxx
 ```
 
 `.env`文件优先级最高，会覆盖环境变量中已有的配置。
