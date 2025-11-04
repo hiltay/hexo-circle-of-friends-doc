@@ -103,10 +103,10 @@
 
 3. **下载二进制文件**
 
-   前往 [Releases](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases) 下载对应平台的二进制文件，例如 Linux：
+   前往 [Releases](https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases) 下载对应平台的最新版本二进制文件，例如 Linux平台：
 
    ```bash
-   wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.4/linux-x86_64-unknown-linux-musl.zip
+   wget https://github.com/Rock-Candy-Tea/hexo-circle-of-friends/releases/download/v6.0.5/linux-x86_64-unknown-linux-musl.zip
    unzip linux-x86_64-unknown-linux-musl.zip
    ```
 

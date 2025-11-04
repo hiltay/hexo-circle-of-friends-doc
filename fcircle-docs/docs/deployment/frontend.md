@@ -2,6 +2,8 @@
 
 友链朋友圈 (fcircle) 的前端负责 **展示友链文章**，通过调用后端 API 渲染页面内容。  
 
+以下内容以 `hexo` 博客框架为例，对于其它博客框架的前端部署也是同理，即：创建页面-->引入js和css文件。
+
 ## 📄 部署步骤
 
 ### 1. 新建页面
@@ -51,12 +53,10 @@ date: 2022-10-09 00:38:16
 
 * 请将 `private_api_url` 替换为你自己的后端 API 地址，例如：
   `https://hexo-friendcircle4-api.vercel.app/` 或 `https://your-domain.com/all`
-* 后端必须已经部署成功，否则前端无法获取数据。
+* 后端必须已经部署成功，否则前端无法从api获取数据。
 :::
 
 ### 3. 样式选择
-
-目前 **仅支持 Hexo Butterfly 主题**，并提供多种样式。
 
 你只需要替换 **CSS 与 JS 文件路径** 即可切换样式：
 
@@ -67,14 +67,16 @@ date: 2022-10-09 00:38:16
 <script src="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/default.min.js"></script>
 ```
 
-#### IMm 风格样式（imm）
+#### imm 风格样式（imm）
 
 ```html
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/imm.min.css">
 <script src="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/imm.min.js"></script>
 ```
 
-#### yyyz 风格样式（yyyz）
+#### yyyz 样式（yyyz）
+
+在imm风格上进行了一些修改。
 
 ```html
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/Rock-Candy-Tea/Friend-Circle-Frontend/hexo-theme-butterfly/yyyz.min.css">
